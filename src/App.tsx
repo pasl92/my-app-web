@@ -1,23 +1,55 @@
   
 import React, { FC } from 'react';
 import styled from 'styled-components';
-
+import { Reset } from 'styled-reset'
 import { TopBar } from '../src/Components/TopBar/TopBar';
 import { LeftMenu } from '../src/Components/LeftMenu/LeftMenu';
+import { MainPage } from '../src/Components/MainPage/MainPage';
 
-const TestStyled = styled.div`
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
+
+const Page =styled.div`
+    background-color: lightgrey;
+    height: auto;
 `;
 
+const LeftAndMainPage= styled.div`
+    background-color: lightsalmon;
+    display: flex;
+`;
 
 const App: FC = () => {
   return (
-      <TestStyled>
-        <TopBar></TopBar>
-        <LeftMenu></LeftMenu>
-      </TestStyled>
-  )
+    <>
+    <Router>
+      <Reset/>
+        <Page>
+          <TopBar></TopBar>
+            <LeftAndMainPage>
+              <LeftMenu></LeftMenu>
+              <MainPage></MainPage>
+            </LeftAndMainPage>
 
+          <Switch>
+            <Route path="/niemamjeszczestronki 1" exact>
+              
+            </Route>
+            <Route path="/" exact>
+              <div>Strona główna</div>
+              <button >Kliknij mnie</button>
+            </Route>
+
+          </Switch>
+      </Page>
+    </Router>
+    </>
+  )
 }
 
 export default App;

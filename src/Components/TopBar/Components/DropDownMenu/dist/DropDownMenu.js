@@ -1,0 +1,79 @@
+"use strict";
+var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+exports.__esModule = true;
+exports.DropDownMenu = void 0;
+var react_1 = require("react");
+var FontSizes_1 = require("../../../../styledHelpers/FontSizes");
+var styled_components_1 = require("styled-components");
+var Wrapper = styled_components_1["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    position: absolute;\n    top: 3%;\n    left: 16%;\n    background-color: white;\n    border:1px solid gray;\n    #filterInput{\n        width:100%;\n        height:50px;\n        display:flex;\n        justify-content:center;\n        align-items:center;\n        input{\n        border-radius:5px;\n        height: 35px;\n        width: 80%;\n        font-size: ", ";\n        outline:none;\n        }\n    }\n"], ["\n    position: absolute;\n    top: 3%;\n    left: 16%;\n    background-color: white;\n    border:1px solid gray;\n    #filterInput{\n        width:100%;\n        height:50px;\n        display:flex;\n        justify-content:center;\n        align-items:center;\n        input{\n        border-radius:5px;\n        height: 35px;\n        width: 80%;\n        font-size: ", ";\n        outline:none;\n        }\n    }\n"])), FontSizes_1.fontSize[18]);
+var InnerWarpper = styled_components_1["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    width:100%;\n    height:280px;\n    display: flex;\n    flex-direction: column;\n    font-family: Tahoma;\n    overflow-y:scroll;\n    margin-left:8px;\n    a{\n        text-decoration:none;\n        color: black;\n    }\n"], ["\n    width:100%;\n    height:280px;\n    display: flex;\n    flex-direction: column;\n    font-family: Tahoma;\n    overflow-y:scroll;\n    margin-left:8px;\n    a{\n        text-decoration:none;\n        color: black;\n    }\n"])));
+var MenuItem = styled_components_1["default"].div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n    width:90%;\n    height: 40px;\n    margin-left: 5px;\n    margin-top: 5px;\n    display:flex;\n    justify-content:start;\n    align-items:center;\n    font-size: ", ";\n    img{\n        height: 25px;\n        width:25px;\n        margin-right: 20px;\n    }\n    p{\n        margin: 2px 2px;\n        font-size: ", "\n    }\n"], ["\n    width:90%;\n    height: 40px;\n    margin-left: 5px;\n    margin-top: 5px;\n    display:flex;\n    justify-content:start;\n    align-items:center;\n    font-size: ", ";\n    img{\n        height: 25px;\n        width:25px;\n        margin-right: 20px;\n    }\n    p{\n        margin: 2px 2px;\n        font-size: ", "\n    }\n"])), FontSizes_1.fontSize[18], FontSizes_1.fontSize[16]);
+exports.DropDownMenu = function () {
+    var _a = react_1.useState(''), inputText = _a[0], setInputText = _a[1];
+    var inputHandler = function (e) {
+        var text = e.target.value;
+        setInputText(text);
+    };
+    return (React.createElement(Wrapper, null,
+        React.createElement("div", { id: "filterInput" },
+            React.createElement("input", { type: "text", value: inputText, onChange: inputHandler, placeholder: "Filter..." })),
+        React.createElement(InnerWarpper, null,
+            React.createElement(MenuItem, null,
+                React.createElement("p", null, "Platform")),
+            'Home'.toLowerCase().includes(inputText.toLowerCase()) && React.createElement(MenuItem, null,
+                React.createElement("img", { src: './icons/house2.png' }),
+                React.createElement("a", { href: "publication" }, "Home")),
+            'Publication'.toLowerCase().includes(inputText.toLowerCase()) && React.createElement(MenuItem, null,
+                "  ",
+                React.createElement("img", { src: './icons/publications.png' }),
+                " ",
+                React.createElement("a", { href: "publication" }, "Publication")),
+            'People'.toLowerCase().includes(inputText.toLowerCase()) && React.createElement(MenuItem, null,
+                " ",
+                React.createElement("img", { src: './icons/people.png' }),
+                " ",
+                React.createElement("a", { href: "people" }, "People"),
+                " "),
+            'Entities'.toLowerCase().includes(inputText.toLowerCase()) && React.createElement(MenuItem, null,
+                " ",
+                React.createElement("img", { src: './icons/entities2.png' }),
+                " ",
+                React.createElement("a", { href: "entities" }, "Entities")),
+            'Administration'.toLowerCase().includes(inputText.toLowerCase()) && React.createElement(MenuItem, null,
+                " ",
+                React.createElement("img", { src: './icons/administration.png' }),
+                " ",
+                React.createElement("a", { href: "administration" }, "Administration")),
+            React.createElement(MenuItem, null,
+                React.createElement("p", null, "Workspaces")),
+            'Client contract'.toLowerCase().includes(inputText.toLowerCase()) && React.createElement(MenuItem, null,
+                " ",
+                React.createElement("img", { src: './icons/entities2.png' }),
+                " ",
+                React.createElement("a", { href: "client_contract" }, "Client contract")),
+            'Supplier contract'.toLowerCase().includes(inputText.toLowerCase()) && React.createElement(MenuItem, null,
+                " ",
+                React.createElement("img", { src: './icons/entities2.png' }),
+                " ",
+                React.createElement("a", { href: "supplier_contract" }, "Supplier contract")),
+            'Corporate'.toLowerCase().includes(inputText.toLowerCase()) && React.createElement(MenuItem, null,
+                " ",
+                React.createElement("img", { src: './icons/entities.png' }),
+                " ",
+                React.createElement("a", { href: "corporate" }, "Corporate")),
+            'Group norms'.toLowerCase().includes(inputText.toLowerCase()) && React.createElement(MenuItem, null,
+                " ",
+                React.createElement("img", { src: './icons/people.png' }),
+                " ",
+                React.createElement("a", { href: "group_norms" }, "Group norms"),
+                " "),
+            'Real estate contracts'.toLowerCase().includes(inputText.toLowerCase()) && React.createElement(MenuItem, null,
+                " ",
+                React.createElement("img", { src: './icons/entities.png' }),
+                " ",
+                React.createElement("a", { href: "real_estate_contracts" }, "Real estate contracts")))));
+};
+var templateObject_1, templateObject_2, templateObject_3;
