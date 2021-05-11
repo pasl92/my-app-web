@@ -4,21 +4,26 @@ import {Colors} from "../../../../styledHelpers/Colors";
 import {fontSize} from "../../../../styledHelpers/FontSizes";
 
 const Wrapper = styled.div`
-    background-color: white;
+    display: flex;
+    flex-direction: column;
     margin-top: 5%;
     margin-left:5%;
     margin-right: 5%;
-    height: 25%;
     width: 90%;
     text-align: center;
-    box-shadow: 0px 5px 5px ${Colors.black};
 `;
+
+const UserProfileWrapper = styled.div`
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    box-shadow: 0px 5px 5px ${Colors.black};
+`
 
 const Photo = styled.div`
     margin-top:10%;
     img {
-    width: 20%;
-    height: 40%;
+    max-width:30%;
     }
 `
 
@@ -33,7 +38,6 @@ const NameSurename = styled.p`
 const JobTitle = styled.p`
     margin-top: 10px;
     color: gray;
-    
 `
 
 const ColoredLine = ({color} : {color: string}) => (
@@ -47,7 +51,6 @@ const ColoredLine = ({color} : {color: string}) => (
 );
 
 const BottomSection = styled.div`
-background-color: lightsalmon;
     display: flex;
     flex-direction: column;
     margin: 3%;
@@ -72,74 +75,80 @@ const YourPublications = styled.div`
 `;
 
 const PhotoBorder = styled.div`
-background-color: lightgreen;
 border-color: black;
 border-width: 2px;
 padding: 1%;
 `;
 
 const UnderUserProfile = styled.div`
-background-color: yellowgreen;
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
+    margin-top: 5%;
+    margin-left: 5%;
 `;
 
 const OtherSections = styled.div`
     display: flex;
-    background-color: yellow;
     margin: 2%;
-    padding: 3%;
+    padding: 1%;
     align-items: center;
-    justify-content: space-between;
+
+    p{
+        margin-left: 10%;
+    }
+    
 `;
+
+
 
 const UserProfile: FC = () => {
     return( 
-        <Wrapper>  
-            <Photo>
-                <img src='./logo.png'alt='Logo'/>
-            </Photo>
+        <Wrapper>
+            <UserProfileWrapper> 
+                <Photo>
+                    <img src='./logo.png'alt='Logo'/>
+                </Photo>
 
-            <NameSurename>Humbrerta Swift</NameSurename>
-            <JobTitle>Job title - Company</JobTitle>
-            <ColoredLine color="black" />
+                <NameSurename>Humbrerta Swift</NameSurename>
+                <JobTitle>Job title - Company</JobTitle>
+                <ColoredLine color="black" />
 
-            <BottomSection>
+                <BottomSection>
 
-                <YourNetwork>
-                    <img src="./icons/network.png"/>
-                        Your network
-                        <PhotoBorder>
-                            <img src="./icons/user-plus.png"/>
-                        </PhotoBorder>
-                </YourNetwork>
+                    <YourNetwork>
+                        <img src="./icons/network.png"/>
+                            Your network
+                            <PhotoBorder>
+                                <img src="./icons/user-plus.png"/>
+                            </PhotoBorder>
+                    </YourNetwork>
 
-                <YourPublications>
-                    <img src="./icons/bell.png"/>
-                    Your publications
-                        <PhotoBorder>
-                            <img src="./icons/plus.png"/>
-                        </PhotoBorder>
-                
-                </YourPublications>
-            </BottomSection>
-            
+                    <YourPublications>
+                        <img src="./icons/bell.png"/>
+                        Your publications
+                            <PhotoBorder>
+                                <img src="./icons/plus.png"/>
+                            </PhotoBorder>
+                    
+                    </YourPublications>
+                </BottomSection>
+            </UserProfileWrapper> 
+
             <UnderUserProfile>
 
                 <OtherSections>
                     <img src="./icons/publications.png"/>
-                    Publications
+                    <p>Publications</p>
                 </OtherSections>
 
                 <OtherSections>
                 <img src="./icons/ecosystem.png"/>
-                    Ecosystem
+                    <p>Ecosystem</p>
                 </OtherSections>
 
                 <OtherSections>
                 <img src="./icons/entities.png"/>
-                    Entities
+                    <p>Entities</p>
                 </OtherSections>
 
             </UnderUserProfile>

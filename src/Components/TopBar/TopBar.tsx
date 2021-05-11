@@ -7,29 +7,25 @@ import {DropDownMenu} from "./Components/DropDownMenu/DropDownMenu";
 
 const Wrapper =styled.div`
     width: 100%;
-    background: lightcyan;
     box-shadow: 1px 1px 12px ${Colors.black};
     display: flex;
-    
+    background-color: white;
 `;
 
 const LeftSection =styled.div`
     display: flex;
-    background-color: lightblue;
     width: 20%;
     padding-left: 1%;
     align-items: center;
 `;
 
 const Logo = styled.div`
-background-color: lightgoldenrodyellow;
     img{
         height: 30px;
     }
 `;
 
 const Home = styled.div`
-    background-color: lightpink;
     padding-left: 5%;
 `
 
@@ -41,7 +37,6 @@ const HomeInscription = styled.div`
 
 
 const NotificationsWrapper = styled.div`
-background-color: lightseagreen;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -54,12 +49,10 @@ background-color: lightseagreen;
 const NotificationButtons = styled.div`
     background-color:${Colors.white};
             :hover {
-            background-color: lightblue;
     }  
     padding: 2%;
     margin-left: 2%;
     display: flex;
-    background-color: lightgrey;
     border-radius: 50%;
     align-items: center;
 `;
@@ -75,7 +68,6 @@ const NotifyBadge = styled.div`
 `
 
 const Arrow = styled.div`
-background-color: lightgreen;
     display: flex;
     justify-content: flex-end;
     img {

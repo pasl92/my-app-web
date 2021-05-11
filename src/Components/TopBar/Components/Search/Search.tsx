@@ -2,7 +2,6 @@ import {FC} from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-background-color: lightyellow;
   display: flex;
   width: 60%;
   align-items: center;

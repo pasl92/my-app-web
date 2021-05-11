@@ -20,7 +20,6 @@ const Page =styled.div`
 `;
 
 const LeftAndMainPage= styled.div`
-    background-color: lightsalmon;
     display: flex;
 `;
 

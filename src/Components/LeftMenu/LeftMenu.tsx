@@ -5,10 +5,9 @@ import  UserProfile  from  "./Components/UserProfile/UserProfile";
 
 
 const Wrapper =styled.div`
-background-color: lightcoral;
     display: flex;
     height: 100vh;
-    width: 15%;
+    width: 25%;
     margin-left: 1%;
 `;
 
