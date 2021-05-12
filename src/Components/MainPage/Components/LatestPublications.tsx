@@ -9,14 +9,15 @@ const LatestPublicationsDiv = styled.div`
     box-shadow: 0px 5px 5px ${Colors.black};
 `
 const LeftSite = styled.div`
-    background: url("testImage.png");
+    background-image: url("testImage.png");
+    box-shadow: inset 0px 0px 60px 86px rgba(0,0,0,0.75);
     width: 30%;
     display: flex;
     align-items: flex-end;
     
     p{
         margin: 3%;
-        color: black;
+        color: whitesmoke;
     }
 `
 const RightSite = styled.div`
@@ -40,6 +41,7 @@ const Publication = styled.div`
     padding: 1%;
     img{
         width:10%;
+        border-radius: 10px;
     }
     p{
         margin: 1%;

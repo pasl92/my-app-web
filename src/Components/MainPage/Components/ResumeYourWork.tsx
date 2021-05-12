@@ -40,12 +40,19 @@ const PostsSection = styled.div`
 `;
 
 const PostsSectionTitle = styled.div`
+    color: ${Colors.lightBlue};
+    font-size: ${fontSize[14]};
+    font-weight:bold;
+    margin-bottom: 0.5%;
 `;
 
 const PostsSectionText = styled.div`
 `;
 
 const PostsSectionBottom = styled.div`
+    color: ${Colors.grey};
+    font-size: ${fontSize[12]};
+    margin-top: 0.5%;
 `;
 export const ResumeYourWork: FC = () => {
     return(
@@ -59,67 +66,67 @@ export const ResumeYourWork: FC = () => {
             <PostsSection>
                 <PostsSectionTitle>Word company SAS</PostsSectionTitle>
                 <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Test</PostsSectionBottom>
+                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
             </PostsSection>
 
             <PostsSection>
                 <PostsSectionTitle>Word company SAS</PostsSectionTitle>
                 <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Test</PostsSectionBottom>
+                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
             </PostsSection>
 
             <PostsSection>
                 <PostsSectionTitle>Word company SAS</PostsSectionTitle>
                 <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Test</PostsSectionBottom>
+                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
             </PostsSection>
 
             <PostsSection>
                 <PostsSectionTitle>Word company SAS</PostsSectionTitle>
                 <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Test</PostsSectionBottom>
+                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
             </PostsSection>
 
             <PostsSection>
                 <PostsSectionTitle>Word company SAS</PostsSectionTitle>
                 <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Test</PostsSectionBottom>
+                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
             </PostsSection>
 
             <PostsSection>
                 <PostsSectionTitle>Word company SAS</PostsSectionTitle>
                 <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Test</PostsSectionBottom>
+                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
             </PostsSection>
 
             <PostsSection>
                 <PostsSectionTitle>Word company SAS</PostsSectionTitle>
                 <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Test</PostsSectionBottom>
+                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
             </PostsSection>
 
             <PostsSection>
                 <PostsSectionTitle>Word company SAS</PostsSectionTitle>
                 <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Test</PostsSectionBottom>
+                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
             </PostsSection>
 
             <PostsSection>
                 <PostsSectionTitle>Word company SAS</PostsSectionTitle>
                 <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Test</PostsSectionBottom>
+                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
             </PostsSection>
 
             <PostsSection>
                 <PostsSectionTitle>Word company SAS</PostsSectionTitle>
                 <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Test</PostsSectionBottom>
+                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
             </PostsSection>
 
             <PostsSection>
                 <PostsSectionTitle>Word company SAS</PostsSectionTitle>
                 <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Test</PostsSectionBottom>
+                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
             </PostsSection>
             
         </ResumeYourWorkDiv>

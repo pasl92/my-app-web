@@ -23,7 +23,8 @@ const UserProfileWrapper = styled.div`
 const Photo = styled.div`
     margin-top:10%;
     img {
-    max-width:30%;
+    max-width:40%;
+    border-radius: 10px;
     }
 `
 
@@ -106,7 +107,7 @@ const UserProfile: FC = () => {
         <Wrapper>
             <UserProfileWrapper> 
                 <Photo>
-                    <img src='./logo.png'alt='Logo'/>
+                    <img src='./testimagepublications.png'alt='Logo'/>
                 </Photo>
 
                 <NameSurename>Humbrerta Swift</NameSurename>

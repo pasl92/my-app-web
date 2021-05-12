@@ -11,7 +11,7 @@ var TopBar_1 = require("../src/Components/TopBar/TopBar");
 var LeftMenu_1 = require("../src/Components/LeftMenu/LeftMenu");
 var MainPage_1 = require("../src/Components/MainPage/MainPage");
 var react_router_dom_1 = require("react-router-dom");
-var Page = styled_components_1["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    background-color: lightgrey;\n    height: auto;\n"], ["\n    background-color: lightgrey;\n    height: auto;\n"])));
+var Page = styled_components_1["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    background-color: lightgrey;\n    height: auto;\n    font-family: Tahoma;\n"], ["\n    background-color: lightgrey;\n    height: auto;\n    font-family: Tahoma;\n"])));
 var LeftAndMainPage = styled_components_1["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    display: flex;\n"], ["\n    display: flex;\n"])));
 var App = function () {
     return (react_1["default"].createElement(react_1["default"].Fragment, null,

@@ -17,6 +17,7 @@ import {
 const Page =styled.div`
     background-color: lightgrey;
     height: auto;
+    font-family: Tahoma;
 `;
 
 const LeftAndMainPage= styled.div`

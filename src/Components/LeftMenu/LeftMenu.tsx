@@ -3,11 +3,10 @@ import styled from 'styled-components';
 import  UserProfile  from  "./Components/UserProfile/UserProfile";
 
 
-
 const Wrapper =styled.div`
     display: flex;
     height: 100vh;
-    width: 25%;
+    width: 35%;
     margin-left: 1%;
 `;
 
