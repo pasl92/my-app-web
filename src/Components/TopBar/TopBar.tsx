@@ -17,6 +17,9 @@ const LeftSection =styled.div`
     width: 20%;
     padding-left: 1%;
     align-items: center;
+        &:hover {
+            box-shadow: inset 0px 0px 190px -42px rgba(0,0,0,0.2);
+        }  
 `;
 
 const Logo = styled.div`
@@ -47,24 +50,27 @@ const NotificationsWrapper = styled.div`
 
 
 const NotificationButtons = styled.div`
-    background-color:${Colors.white};
-            :hover {
-    }  
-    padding: 2%;
+    background-color: lightgray;
+        :hover {
+            box-shadow: inset 0px 0px 190px -42px rgba(0,0,0,0.2);
+        }  
+    padding: 3%;
     margin-left: 2%;
     display: flex;
     border-radius: 50%;
     align-items: center;
 `;
 
-const NotificationIcon = styled.div`
-    position: relative;
-    float: left;
-`
 
 const NotifyBadge = styled.div`
-    position: relative;
-    float: left;
+    position: absolute;
+    background-color: lightskyblue;
+    opacity: 0.8;
+    padding: 0.2%;
+    margin-bottom: 1.5%;
+    margin-left: 1%;
+    border-radius: 50%;
+    font-size: 12px;
 `
 
 const Arrow = styled.div`
@@ -111,10 +117,13 @@ export const TopBar: FC = () => {
 
                     <NotificationButtons>
                         <img src="./icons/comments.png"/>
+                        <NotifyBadge>2</NotifyBadge>
                     </NotificationButtons>
+                    
 
                     <NotificationButtons>
                         <img src="./icons/bell.png"/>
+                        <NotifyBadge>12</NotifyBadge>
                     </NotificationButtons>
                 </NotificationsWrapper>
             

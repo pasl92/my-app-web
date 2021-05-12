@@ -5,6 +5,7 @@ import { Reset } from 'styled-reset'
 import { TopBar } from '../src/Components/TopBar/TopBar';
 import { LeftMenu } from '../src/Components/LeftMenu/LeftMenu';
 import { MainPage } from '../src/Components/MainPage/MainPage';
+import { TestSite } from '../src/Components/TestSite/TestSite';
 
 import {
   BrowserRouter as Router,
@@ -33,19 +34,23 @@ const App: FC = () => {
           <TopBar></TopBar>
             <LeftAndMainPage>
               <LeftMenu></LeftMenu>
-              <MainPage></MainPage>
+              
+                <Switch>
+                    <Route path="/TestSite" exact>
+                      <TestSite/>
+                    </Route>
+
+                    <Route path="/MainPage" exact>
+                      <MainPage/>
+                    </Route>
+
+
+                </Switch>
+
+              
             </LeftAndMainPage>
 
-          <Switch>
-            <Route path="/niemamjeszczestronki 1" exact>
-              
-            </Route>
-            <Route path="/" exact>
-              <div>Strona główna</div>
-              <button >Kliknij mnie</button>
-            </Route>
-
-          </Switch>
+          
       </Page>
     </Router>
     </>

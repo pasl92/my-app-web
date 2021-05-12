@@ -40,6 +40,10 @@ const Post = styled.div`
     box-shadow: 0px 5px 5px ${Colors.black};
     background-color: whitesmoke;
     flex: 0 0 auto; 
+    &:hover {
+            box-shadow: 0px 10px 15px ${Colors.black};
+        } 
+    
 
     img{
         max-width: 100%;

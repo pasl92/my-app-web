@@ -10,10 +10,13 @@ const LatestPublicationsDiv = styled.div`
 `
 const LeftSite = styled.div`
     background-image: url("testImage.png");
-    box-shadow: inset 0px 0px 60px 86px rgba(0,0,0,0.75);
+    box-shadow: inset 0px -174px 69px -41px rgba(0,0,0,0.52);
     width: 30%;
     display: flex;
     align-items: flex-end;
+    &:hover {
+            box-shadow: inset 0px -174px 69px -41px rgba(0,0,0,0.9);
+        } 
     
     p{
         margin: 3%;
@@ -47,6 +50,9 @@ const Publication = styled.div`
         margin: 1%;
         margin-left: 2%;
     }
+    &:hover {
+            box-shadow: inset 0px 0px 190px -42px rgba(0,0,0,0.2);
+        }  
 `
 
 const FooterLatestPublications = styled.div`

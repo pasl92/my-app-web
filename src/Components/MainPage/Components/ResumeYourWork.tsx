@@ -37,6 +37,9 @@ const PostsSection = styled.div`
     margin-left: 1%;
     margin-right: 1%;
     box-shadow: 0px 2px 5px ${Colors.black};
+    &:hover {
+            box-shadow: 0px 4px 20px ${Colors.black};
+        } 
 `;
 
 const PostsSectionTitle = styled.div`

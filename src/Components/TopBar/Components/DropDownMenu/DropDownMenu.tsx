@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
     position: absolute;
-    top: 3%;
+    top: 4%;
     left: 16%;
     background-color: white;
     border:1px solid gray;
@@ -15,8 +15,7 @@ const Wrapper = styled.div`
         justify-content:center;
         align-items:center;
         input{
-        border-radius:5px;
-        height: 35px;
+        height: 40%;
         width: 80%;
         font-size: ${fontSize[18]};
         outline:none;
@@ -29,12 +28,10 @@ const InnerWarpper = styled.div`
     height:280px;
     display: flex;
     flex-direction: column;
-    font-family: Tahoma;
     overflow-y:scroll;
     margin-left:8px;
     a{
         text-decoration:none;
-        color: black;
     }
 `;
 
@@ -56,6 +53,9 @@ const MenuItem = styled.div`
         margin: 2px 2px;
         font-size: ${fontSize[16]}
     }
+    &:hover {
+            box-shadow: inset 0px 0px 190px -42px rgba(0,0,0,0.2);
+        }  
 `;
 
 export const DropDownMenu: FC = () => {
@@ -73,10 +73,10 @@ export const DropDownMenu: FC = () => {
             <InnerWarpper>
                 <MenuItem><p>Platform</p></MenuItem>
                 {
-                    'Home'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem ><img src='./icons/house2.png'/><a href="publication">Home</a></MenuItem>
+                    'Home'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem ><img src='./icons/house2.png'/><a href="MainPage">Home</a></MenuItem>
                 }
                 {
-                    'Publication'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem>  <img src='./icons/publications.png'/> <a href="publication">Publication</a></MenuItem>
+                    'Publication'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem>  <img src='./icons/publications.png'/> <a href="testsite">Publication</a></MenuItem>
                 }
                 {
                     'People'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/people.png'/> <a href="people">People</a> </MenuItem>

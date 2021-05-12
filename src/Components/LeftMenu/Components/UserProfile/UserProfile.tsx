@@ -11,6 +11,7 @@ const Wrapper = styled.div`
     margin-right: 5%;
     width: 90%;
     text-align: center;
+    font-weight:bold;
 `;
 
 const UserProfileWrapper = styled.div`
@@ -31,9 +32,12 @@ const Photo = styled.div`
 const NameSurename = styled.p`
     margin-top:10px;
     color: ${Colors.lightBlue};
-    font-size: ${fontSize[14]};
+    font-size: ${fontSize[18]};
     font-weight:bold;
-    font-family: Tahoma;
+    &:hover {
+            transition-delay: 0.2s;
+            font-size: ${fontSize[22]};
+        }  
 `
 
 const JobTitle = styled.p`
@@ -64,6 +68,10 @@ const YourNetwork =styled.div`
     margin: 3%;
     margin-left: 5%;
     margin-right: 5%;
+    &:hover {
+            transition-delay: 0.2s;
+            font-size: ${fontSize[22]};
+        } 
 `;
 
 const YourPublications = styled.div`
@@ -73,6 +81,10 @@ const YourPublications = styled.div`
     margin: 3%;
     margin-left: 5%;
     margin-right: 5%;
+    &:hover {
+            transition-delay: 0.2s;
+            font-size: ${fontSize[22]};
+        }  
 `;
 
 const PhotoBorder = styled.div`
@@ -86,6 +98,7 @@ const UnderUserProfile = styled.div`
     flex-direction: column;
     margin-top: 5%;
     margin-left: 5%;
+    font-weight: lighter;
 `;
 
 const OtherSections = styled.div`
@@ -93,6 +106,10 @@ const OtherSections = styled.div`
     margin: 2%;
     padding: 1%;
     align-items: center;
+    &:hover {
+            transition-delay: 0.2s;
+            font-size: ${fontSize[22]};
+        } 
 
     p{
         margin-left: 10%;

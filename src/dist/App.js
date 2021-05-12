@@ -10,6 +10,7 @@ var styled_reset_1 = require("styled-reset");
 var TopBar_1 = require("../src/Components/TopBar/TopBar");
 var LeftMenu_1 = require("../src/Components/LeftMenu/LeftMenu");
 var MainPage_1 = require("../src/Components/MainPage/MainPage");
+var TestSite_1 = require("../src/Components/TestSite/TestSite");
 var react_router_dom_1 = require("react-router-dom");
 var Page = styled_components_1["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    background-color: lightgrey;\n    height: auto;\n    font-family: Tahoma;\n"], ["\n    background-color: lightgrey;\n    height: auto;\n    font-family: Tahoma;\n"])));
 var LeftAndMainPage = styled_components_1["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    display: flex;\n"], ["\n    display: flex;\n"])));
@@ -21,12 +22,11 @@ var App = function () {
                 react_1["default"].createElement(TopBar_1.TopBar, null),
                 react_1["default"].createElement(LeftAndMainPage, null,
                     react_1["default"].createElement(LeftMenu_1.LeftMenu, null),
-                    react_1["default"].createElement(MainPage_1.MainPage, null)),
-                react_1["default"].createElement(react_router_dom_1.Switch, null,
-                    react_1["default"].createElement(react_router_dom_1.Route, { path: "/niemamjeszczestronki 1", exact: true }),
-                    react_1["default"].createElement(react_router_dom_1.Route, { path: "/", exact: true },
-                        react_1["default"].createElement("div", null, "Strona g\u0142\u00F3wna"),
-                        react_1["default"].createElement("button", null, "Kliknij mnie")))))));
+                    react_1["default"].createElement(react_router_dom_1.Switch, null,
+                        react_1["default"].createElement(react_router_dom_1.Route, { path: "/TestSite", exact: true },
+                            react_1["default"].createElement(TestSite_1.TestSite, null)),
+                        react_1["default"].createElement(react_router_dom_1.Route, { path: "/MainPage", exact: true },
+                            react_1["default"].createElement(MainPage_1.MainPage, null))))))));
 };
 exports["default"] = App;
 var templateObject_1, templateObject_2;
