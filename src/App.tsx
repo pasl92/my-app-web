@@ -6,6 +6,9 @@ import { TopBar } from '../src/Components/TopBar/TopBar';
 import { LeftMenu } from '../src/Components/LeftMenu/LeftMenu';
 import { MainPage } from '../src/Components/MainPage/MainPage';
 import { TestSite } from '../src/Components/TestSite/TestSite';
+import { Publications } from '../src/Components/Publications/Publications';
+import { Users } from '../src/Components/Data/GetUsers';
+import { MyProfile } from './Components/MyProfile/MyProfile';
 
 import {
   BrowserRouter as Router,
@@ -13,6 +16,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
 
 
 const Page =styled.div`
@@ -24,6 +28,7 @@ const Page =styled.div`
 const LeftAndMainPage= styled.div`
     display: flex;
 `;
+
 
 const App: FC = () => {
   return (
@@ -44,6 +49,14 @@ const App: FC = () => {
                       <MainPage/>
                     </Route>
 
+                    <Route path="/Publications" exact>
+                      <Publications/>
+                    </Route>
+
+                    <Route path="/MyProfile" exact>
+                      <MyProfile/>
+                    </Route>
+
 
                 </Switch>
 
@@ -58,3 +71,5 @@ const App: FC = () => {
 }
 
 export default App;
+
+

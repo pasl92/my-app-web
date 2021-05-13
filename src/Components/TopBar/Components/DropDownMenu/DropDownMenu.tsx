@@ -24,26 +24,22 @@ const Wrapper = styled.div`
 `;
 
 const InnerWarpper = styled.div`
-    width:100%;
-    height:280px;
-    display: flex;
-    flex-direction: column;
-    overflow-y:scroll;
-    margin-left:8px;
-    a{
-        text-decoration:none;
-    }
+    overflow-y: scroll;
+    max-height: 250px;
+    
 `;
 
 const MenuItem = styled.div`
-    width:90%;
-    height: 40px;
-    margin-left: 5px;
-    margin-top: 5px;
+
     display:flex;
     justify-content:start;
     align-items:center;
-    font-size: ${fontSize[18]};
+    margin: 2%;
+    text-decoration: none;
+    a {
+        text-decoration:none;
+        color: black;
+        }
     img{
         height: 25px;
         width:25px;
@@ -51,11 +47,23 @@ const MenuItem = styled.div`
     }
     p{
         margin: 2px 2px;
-        font-size: ${fontSize[16]}
+        font-size: ${fontSize[16]};
+        
     }
     &:hover {
             box-shadow: inset 0px 0px 190px -42px rgba(0,0,0,0.2);
         }  
+`;
+
+const AccountWrapper = styled.div`
+`;
+
+const TitleMenuItem = styled.div`
+    font-size: ${fontSize[14]};
+    font-weight: bold;
+    color: gray;
+    margin: 3%;
+    margin-bottom: 5%;
 `;
 
 export const DropDownMenu: FC = () => {
@@ -71,7 +79,7 @@ export const DropDownMenu: FC = () => {
                 <input type="text" value={inputText} onChange={inputHandler} placeholder="Filter..." />
             </div>
             <InnerWarpper>
-                <MenuItem><p>Platform</p></MenuItem>
+                <TitleMenuItem><p>Platform</p></TitleMenuItem>
                 {
                     'Home'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem ><img src='./icons/house2.png'/><a href="MainPage">Home</a></MenuItem>
                 }
@@ -87,7 +95,7 @@ export const DropDownMenu: FC = () => {
                 {
                     'Administration'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/administration.png'/> <a href="administration">Administration</a></MenuItem>
                 }
-                <MenuItem><p>Workspaces</p></MenuItem>
+                <TitleMenuItem><p>Workspaces</p></TitleMenuItem>
                 {
                     'Client contract'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/entities2.png'/> <a href="client_contract">Client contract</a></MenuItem>
                 }
@@ -103,7 +111,25 @@ export const DropDownMenu: FC = () => {
                 {
                     'Real estate contracts'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/entities.png'/> <a href="real_estate_contracts">Real estate contracts</a></MenuItem>
                 }
+                
             </InnerWarpper>
+                <AccountWrapper>
+                    <hr></hr>
+                    <TitleMenuItem><p>Account</p></TitleMenuItem>
+                        {
+                            <MenuItem> <img src='./testimagepublications.png'/> <a href="Profile">Profile</a></MenuItem>
+                        }
+                        {
+                            <MenuItem> <img src='./icons/privacy.png'/> <a href="testsite">Privacy</a></MenuItem>
+                        }
+                        {
+                            <MenuItem> <img src='./icons/settings.png'/> <a href="testsite">Settings</a></MenuItem>
+                        }
+                        <hr></hr>
+                        {
+                            <MenuItem> <img src='./icons/logout.png'/> <a href="testsite">Logout</a> </MenuItem>
+                        }
+                </AccountWrapper>
         </Wrapper>
     )
 }

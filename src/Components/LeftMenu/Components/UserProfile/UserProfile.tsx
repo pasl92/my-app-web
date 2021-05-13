@@ -19,6 +19,12 @@ const UserProfileWrapper = styled.div`
     background-color: white;
     flex-direction: column;
     box-shadow: 0px 5px 5px ${Colors.black};
+
+    text-decoration: none;
+    a {
+        text-decoration:none;
+        color: black;
+        }
 `
 
 const Photo = styled.div`
@@ -31,13 +37,16 @@ const Photo = styled.div`
 
 const NameSurename = styled.p`
     margin-top:10px;
-    color: ${Colors.lightBlue};
     font-size: ${fontSize[18]};
     font-weight:bold;
     &:hover {
             transition-delay: 0.2s;
             font-size: ${fontSize[22]};
         }  
+    a {
+        text-decoration:none;
+        color: ${Colors.lightBlue};
+        }
 `
 
 const JobTitle = styled.p`
@@ -114,9 +123,21 @@ const OtherSections = styled.div`
     p{
         margin-left: 10%;
     }
+
+    text-decoration: none;
+    a {
+        text-decoration:none;
+        color: black;
+        }
     
 `;
 
+async function getUsers() {
+  const url = "https://jsonplaceholder.typicode.com/todos/1";
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log(data);
+};
 
 
 const UserProfile: FC = () => {
@@ -127,15 +148,15 @@ const UserProfile: FC = () => {
                     <img src='./testimagepublications.png'alt='Logo'/>
                 </Photo>
 
-                <NameSurename>Humbrerta Swift</NameSurename>
+                <NameSurename><a href="MyProfile"> Humbrerta Swift </a></NameSurename>
                 <JobTitle>Job title - Company</JobTitle>
                 <ColoredLine color="black" />
 
                 <BottomSection>
 
-                    <YourNetwork>
+                    <YourNetwork >
                         <img src="./icons/network.png"/>
-                            Your network
+                            <a href="testsite"> Your network </a>
                             <PhotoBorder>
                                 <img src="./icons/user-plus.png"/>
                             </PhotoBorder>
@@ -143,7 +164,7 @@ const UserProfile: FC = () => {
 
                     <YourPublications>
                         <img src="./icons/bell.png"/>
-                        Your publications
+                        <a href="testsite"> Your publications </a>
                             <PhotoBorder>
                                 <img src="./icons/plus.png"/>
                             </PhotoBorder>
@@ -156,17 +177,17 @@ const UserProfile: FC = () => {
 
                 <OtherSections>
                     <img src="./icons/publications.png"/>
-                    <p>Publications</p>
+                    <a href="testsite"> <p>Publications</p> </a>
                 </OtherSections>
 
                 <OtherSections>
                 <img src="./icons/ecosystem.png"/>
-                    <p>Ecosystem</p>
+                <a href="testsite"> <p>Ecosystem</p> </a>
                 </OtherSections>
 
                 <OtherSections>
                 <img src="./icons/entities.png"/>
-                    <p>Entities</p>
+                <a href="testsite"> <p>Entities</p> </a>
                 </OtherSections>
 
             </UnderUserProfile>

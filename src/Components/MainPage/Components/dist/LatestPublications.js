@@ -14,7 +14,7 @@ var RightSite = styled_components_1["default"].div(templateObject_3 || (template
 var TitleLatestPublications = styled_components_1["default"].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n    display: flex;\n    font-size: ", ";\n    font-weight: bold;\n    padding: 1%;\n\n"], ["\n    display: flex;\n    font-size: ", ";\n    font-weight: bold;\n    padding: 1%;\n\n"])), FontSizes_1.fontSize[24]);
 var LastPublicationsWrapper = styled_components_1["default"].div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n"], ["\n"])));
 var Publication = styled_components_1["default"].div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n    display: flex;\n    padding: 1%;\n    img{\n        width:10%;\n        border-radius: 10px;\n    }\n    p{\n        margin: 1%;\n        margin-left: 2%;\n    }\n    &:hover {\n            box-shadow: inset 0px 0px 190px -42px rgba(0,0,0,0.2);\n        }  \n"], ["\n    display: flex;\n    padding: 1%;\n    img{\n        width:10%;\n        border-radius: 10px;\n    }\n    p{\n        margin: 1%;\n        margin-left: 2%;\n    }\n    &:hover {\n            box-shadow: inset 0px 0px 190px -42px rgba(0,0,0,0.2);\n        }  \n"])));
-var FooterLatestPublications = styled_components_1["default"].div(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n    padding-top: 2%;\n    padding-left: 1%;\n"], ["\n    padding-top: 2%;\n    padding-left: 1%;\n"])));
+var FooterLatestPublications = styled_components_1["default"].div(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n    padding-top: 1%;\n    padding-left: 1%;\n    font-weight: bold;\n    font-size: ", ";\n    a{\n        text-decoration:none;\n    }\n"], ["\n    padding-top: 1%;\n    padding-left: 1%;\n    font-weight: bold;\n    font-size: ", ";\n    a{\n        text-decoration:none;\n    }\n"])), FontSizes_1.fontSize[20]);
 exports.LatestPublications = function () {
     return (React.createElement(LatestPublicationsDiv, null,
         React.createElement(LeftSite, null,
@@ -37,7 +37,8 @@ exports.LatestPublications = function () {
                     React.createElement("img", { src: "testimagepublications.png" }),
                     " ",
                     React.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."))),
-            React.createElement(FooterLatestPublications, null, "Test link "))));
+            React.createElement(FooterLatestPublications, null,
+                React.createElement("a", { href: "Publications" }, " See more publications")))));
 };
 exports["default"] = exports.LatestPublications;
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7;

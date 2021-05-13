@@ -56,8 +56,13 @@ const Publication = styled.div`
 `
 
 const FooterLatestPublications = styled.div`
-    padding-top: 2%;
+    padding-top: 1%;
     padding-left: 1%;
+    font-weight: bold;
+    font-size: ${fontSize[20]};
+    a{
+        text-decoration:none;
+    }
 `
 
 export const LatestPublications: FC = () => {
@@ -71,7 +76,7 @@ export const LatestPublications: FC = () => {
                         <Publication> <img src= "testimagepublications.png"></img> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p></Publication>
                         <Publication> <img src= "testimagepublications.png"></img> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p></Publication>
                     </LastPublicationsWrapper>
-                    <FooterLatestPublications>Test link </FooterLatestPublications>
+                    <FooterLatestPublications><a href="Publications"> See more publications</a></FooterLatestPublications>
                 </RightSite>
 
             </LatestPublicationsDiv>

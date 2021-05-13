@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 import {LatestPublications} from "./Components/LatestPublications";
-import {Workspaces} from "./Components/Workspaces";
+import Workspaces from "./Components/Workspaces";
 import {ResumeYourWork} from "./Components/ResumeYourWork";
 
 const Wrapper = styled.div`
@@ -10,6 +10,7 @@ const Wrapper = styled.div`
     margin: 1%;
     margin-right:3%;
 `
+
 
 export const MainPage: FC = () => {
     return(

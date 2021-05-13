@@ -44,12 +44,10 @@ const Post = styled.div`
             box-shadow: 0px 10px 15px ${Colors.black};
         } 
     
-
     img{
         max-width: 100%;
         max-height: 100%;    
         }
-
     p{
         margin: 1%;
         margin-bottom: 10%;
@@ -66,9 +64,6 @@ export const Workspaces: FC = () => {
                       <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
                       <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
                       <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
-                      
-                      
-
                   </WorkspacesDataDiv>
               
 
