@@ -1,7 +1,9 @@
-import { FC } from 'react';
+import { FC, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import {Colors} from "../../../../styledHelpers/Colors";
 import {fontSize} from "../../../../styledHelpers/FontSizes";
+import {Users} from "../../../Data/GetUsers"
+
 
 const Wrapper = styled.div`
     display: flex;
@@ -132,15 +134,23 @@ const OtherSections = styled.div`
     
 `;
 
-async function getUsers() {
-  const url = "https://jsonplaceholder.typicode.com/todos/1";
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
-};
 
+type UserType = {
+    title: string;
+    name: string;
+    company:{
+        name: string
+    } 
+ }
 
 const UserProfile: FC = () => {
+    
+    const [apiData, setApiData] = useState<UserType>()
+    useEffect(()=> {
+        fetch("https://jsonplaceholder.typicode.com/users/1").then(res=>res.json()).then(json=>setApiData(json))
+     }, [])
+
+
     return( 
         <Wrapper>
             <UserProfileWrapper> 
@@ -148,8 +158,8 @@ const UserProfile: FC = () => {
                     <img src='./testimagepublications.png'alt='Logo'/>
                 </Photo>
 
-                <NameSurename><a href="MyProfile"> Humbrerta Swift </a></NameSurename>
-                <JobTitle>Job title - Company</JobTitle>
+                <NameSurename><a href="MyProfile"> {apiData?.name} </a></NameSurename>
+                <JobTitle>{apiData?.company?.name}</JobTitle>
                 <ColoredLine color="black" />
 
                 <BottomSection>

@@ -1,7 +1,5 @@
 import { FC } from 'react';
 
-
-
 export const Users = () => {
     return(
             fetch('https://jsonplaceholder.typicode.com/todos/1')

@@ -3,70 +3,91 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 exports.__esModule = true;
 exports.ResumeYourWork = void 0;
+var react_1 = require("react");
+var axios_1 = require("axios");
+var Posts_1 = require("../../../Components/Posts");
+var Pagination_1 = require("../../../Components/Pagination");
 var styled_components_1 = require("styled-components");
-var Colors_1 = require("../../../styledHelpers/Colors");
 var Search_1 = require("../../TopBar/Components/Search/Search");
 var FontSizes_1 = require("../../../styledHelpers/FontSizes");
 var ResumeYourWorkDiv = styled_components_1["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    margin-top: 3%;\n    display: flex;\n    flex-direction: column;\n"], ["\n    margin-top: 3%;\n    display: flex;\n    flex-direction: column;\n"])));
 var TopSection = styled_components_1["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    display: flex;\n    margin-bottom: 1%;\n    align-items: center;\n"], ["\n    display: flex;\n    margin-bottom: 1%;\n    align-items: center;\n"])));
 var ResumeYourWorkTitle = styled_components_1["default"].div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n    display: flex;\n    margin-bottom: 0%;\n    margin-left: 3%;\n    margin-right: 5%;\n    font-size: ", ";\n    font-weight: bold;\n"], ["\n    display: flex;\n    margin-bottom: 0%;\n    margin-left: 3%;\n    margin-right: 5%;\n    font-size: ", ";\n    font-weight: bold;\n"])), FontSizes_1.fontSize[24]);
 var Fallowed = styled_components_1["default"].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n"], ["\n"])));
-var PostsSection = styled_components_1["default"].div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n    display: flex;\n    flex-direction: column;\n    background-color: whitesmoke;\n    padding: 0.5%;\n    margin-bottom: 0.5%;\n    margin-left: 1%;\n    margin-right: 1%;\n    box-shadow: 0px 2px 5px ", ";\n    &:hover {\n            box-shadow: 0px 4px 20px ", ";\n        } \n"], ["\n    display: flex;\n    flex-direction: column;\n    background-color: whitesmoke;\n    padding: 0.5%;\n    margin-bottom: 0.5%;\n    margin-left: 1%;\n    margin-right: 1%;\n    box-shadow: 0px 2px 5px ", ";\n    &:hover {\n            box-shadow: 0px 4px 20px ", ";\n        } \n"])), Colors_1.Colors.black, Colors_1.Colors.black);
-var PostsSectionTitle = styled_components_1["default"].div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n    color: ", ";\n    font-size: ", ";\n    font-weight:bold;\n    margin-bottom: 0.5%;\n"], ["\n    color: ", ";\n    font-size: ", ";\n    font-weight:bold;\n    margin-bottom: 0.5%;\n"])), Colors_1.Colors.lightBlue, FontSizes_1.fontSize[14]);
-var PostsSectionText = styled_components_1["default"].div(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n"], ["\n"])));
-var PostsSectionBottom = styled_components_1["default"].div(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n    color: ", ";\n    font-size: ", ";\n    margin-top: 0.5%;\n"], ["\n    color: ", ";\n    font-size: ", ";\n    margin-top: 0.5%;\n"])), Colors_1.Colors.grey, FontSizes_1.fontSize[12]);
 exports.ResumeYourWork = function () {
-    return (React.createElement(ResumeYourWorkDiv, null,
-        React.createElement(TopSection, null,
-            React.createElement(ResumeYourWorkTitle, null, "Resume your Work"),
-            React.createElement(Search_1["default"], null),
-            React.createElement(Fallowed, null, "Fallowed...")),
-        React.createElement(PostsSection, null,
-            React.createElement(PostsSectionTitle, null, "Word company SAS"),
-            React.createElement(PostsSectionText, null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."),
-            React.createElement(PostsSectionBottom, null, "Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe")),
-        React.createElement(PostsSection, null,
-            React.createElement(PostsSectionTitle, null, "Word company SAS"),
-            React.createElement(PostsSectionText, null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."),
-            React.createElement(PostsSectionBottom, null, "Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe")),
-        React.createElement(PostsSection, null,
-            React.createElement(PostsSectionTitle, null, "Word company SAS"),
-            React.createElement(PostsSectionText, null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."),
-            React.createElement(PostsSectionBottom, null, "Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe")),
-        React.createElement(PostsSection, null,
-            React.createElement(PostsSectionTitle, null, "Word company SAS"),
-            React.createElement(PostsSectionText, null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."),
-            React.createElement(PostsSectionBottom, null, "Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe")),
-        React.createElement(PostsSection, null,
-            React.createElement(PostsSectionTitle, null, "Word company SAS"),
-            React.createElement(PostsSectionText, null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."),
-            React.createElement(PostsSectionBottom, null, "Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe")),
-        React.createElement(PostsSection, null,
-            React.createElement(PostsSectionTitle, null, "Word company SAS"),
-            React.createElement(PostsSectionText, null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."),
-            React.createElement(PostsSectionBottom, null, "Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe")),
-        React.createElement(PostsSection, null,
-            React.createElement(PostsSectionTitle, null, "Word company SAS"),
-            React.createElement(PostsSectionText, null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."),
-            React.createElement(PostsSectionBottom, null, "Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe")),
-        React.createElement(PostsSection, null,
-            React.createElement(PostsSectionTitle, null, "Word company SAS"),
-            React.createElement(PostsSectionText, null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."),
-            React.createElement(PostsSectionBottom, null, "Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe")),
-        React.createElement(PostsSection, null,
-            React.createElement(PostsSectionTitle, null, "Word company SAS"),
-            React.createElement(PostsSectionText, null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."),
-            React.createElement(PostsSectionBottom, null, "Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe")),
-        React.createElement(PostsSection, null,
-            React.createElement(PostsSectionTitle, null, "Word company SAS"),
-            React.createElement(PostsSectionText, null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."),
-            React.createElement(PostsSectionBottom, null, "Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe")),
-        React.createElement(PostsSection, null,
-            React.createElement(PostsSectionTitle, null, "Word company SAS"),
-            React.createElement(PostsSectionText, null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."),
-            React.createElement(PostsSectionBottom, null, "Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe"))));
+    var _a = react_1.useState([]), posts = _a[0], setPosts = _a[1];
+    var _b = react_1.useState(false), loading = _b[0], setLoading = _b[1];
+    var _c = react_1.useState(1), currentPage = _c[0], setCurrentPage = _c[1];
+    var postsPerPage = react_1.useState(10)[0];
+    react_1.useEffect(function () {
+        var fetchPosts = function () { return __awaiter(void 0, void 0, void 0, function () {
+            var res;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        setLoading(true);
+                        return [4 /*yield*/, axios_1["default"].get('https://jsonplaceholder.typicode.com/posts')];
+                    case 1:
+                        res = _a.sent();
+                        setPosts(res.data);
+                        setLoading(false);
+                        return [2 /*return*/];
+                }
+            });
+        }); };
+        fetchPosts();
+    }, []);
+    // Get current posts
+    var indexOfLastPost = currentPage * postsPerPage;
+    var indexOfFirstPost = indexOfLastPost - postsPerPage;
+    var currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+    // Change page
+    var paginate = function (pageNumber) { return setCurrentPage(pageNumber); };
+    return (react_1["default"].createElement(ResumeYourWorkDiv, null,
+        react_1["default"].createElement(TopSection, null,
+            react_1["default"].createElement(ResumeYourWorkTitle, null, "Resume your Work"),
+            react_1["default"].createElement(Search_1["default"], null),
+            react_1["default"].createElement(Fallowed, null, "Fallowed...")),
+        react_1["default"].createElement(Posts_1["default"], { posts: currentPosts, loading: loading }),
+        react_1["default"].createElement(Pagination_1["default"], { postsPerPage: postsPerPage, totalPosts: posts.length, paginate: paginate })));
 };
 exports["default"] = exports.ResumeYourWork;
-var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8;
+var templateObject_1, templateObject_2, templateObject_3, templateObject_4;

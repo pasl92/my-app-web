@@ -64,6 +64,14 @@ export const Workspaces: FC = () => {
                       <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
                       <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
                       <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
+                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
+                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
+                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
+                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
+                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
+                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
+                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
+
                   </WorkspacesDataDiv>
               
 

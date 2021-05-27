@@ -1,3 +1,7 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Posts from '../../../Components/Posts';
+import Pagination from '../../../Components/Pagination';
 import { FC } from 'react';
 import styled from 'styled-components';
 import {Colors} from "../../../styledHelpers/Colors";
@@ -28,110 +32,47 @@ const ResumeYourWorkTitle = styled.div`
 const Fallowed = styled.div`
 `;
 
-const PostsSection = styled.div`
-    display: flex;
-    flex-direction: column;
-    background-color: whitesmoke;
-    padding: 0.5%;
-    margin-bottom: 0.5%;
-    margin-left: 1%;
-    margin-right: 1%;
-    box-shadow: 0px 2px 5px ${Colors.black};
-    &:hover {
-            box-shadow: 0px 4px 20px ${Colors.black};
-        } 
-`;
 
-const PostsSectionTitle = styled.div`
-    color: ${Colors.lightBlue};
-    font-size: ${fontSize[14]};
-    font-weight:bold;
-    margin-bottom: 0.5%;
-`;
-
-const PostsSectionText = styled.div`
-`;
-
-const PostsSectionBottom = styled.div`
-    color: ${Colors.grey};
-    font-size: ${fontSize[12]};
-    margin-top: 0.5%;
-`;
 export const ResumeYourWork: FC = () => {
+
+    const [posts, setPosts] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(10);
+
+    useEffect(() => {
+        const fetchPosts = async () => {
+          setLoading(true);
+          const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
+          setPosts(res.data);
+          setLoading(false);
+        };
+
+        fetchPosts();
+        }, []);
+
+        // Get current posts
+        const indexOfLastPost = currentPage * postsPerPage;
+        const indexOfFirstPost = indexOfLastPost - postsPerPage;
+        const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+         // Change page
+         const paginate = pageNumber => setCurrentPage(pageNumber);
+    
     return(
         <ResumeYourWorkDiv>
             <TopSection>
                 <ResumeYourWorkTitle>Resume your Work</ResumeYourWorkTitle>
                 <Search></Search>
                 <Fallowed>Fallowed...</Fallowed>
+            
             </TopSection>
 
-            <PostsSection>
-                <PostsSectionTitle>Word company SAS</PostsSectionTitle>
-                <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
-            </PostsSection>
-
-            <PostsSection>
-                <PostsSectionTitle>Word company SAS</PostsSectionTitle>
-                <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
-            </PostsSection>
-
-            <PostsSection>
-                <PostsSectionTitle>Word company SAS</PostsSectionTitle>
-                <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
-            </PostsSection>
-
-            <PostsSection>
-                <PostsSectionTitle>Word company SAS</PostsSectionTitle>
-                <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
-            </PostsSection>
-
-            <PostsSection>
-                <PostsSectionTitle>Word company SAS</PostsSectionTitle>
-                <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
-            </PostsSection>
-
-            <PostsSection>
-                <PostsSectionTitle>Word company SAS</PostsSectionTitle>
-                <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
-            </PostsSection>
-
-            <PostsSection>
-                <PostsSectionTitle>Word company SAS</PostsSectionTitle>
-                <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
-            </PostsSection>
-
-            <PostsSection>
-                <PostsSectionTitle>Word company SAS</PostsSectionTitle>
-                <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
-            </PostsSection>
-
-            <PostsSection>
-                <PostsSectionTitle>Word company SAS</PostsSectionTitle>
-                <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
-            </PostsSection>
-
-            <PostsSection>
-                <PostsSectionTitle>Word company SAS</PostsSectionTitle>
-                <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
-            </PostsSection>
-
-            <PostsSection>
-                <PostsSectionTitle>Word company SAS</PostsSectionTitle>
-                <PostsSectionText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</PostsSectionText>
-                <PostsSectionBottom>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</PostsSectionBottom>
-            </PostsSection>
-            
+                <Posts posts={currentPosts} loading={loading}></Posts>
+                    <Pagination
+                            postsPerPage={postsPerPage}
+                            totalPosts={posts.length}
+                            paginate={paginate}/>
         </ResumeYourWorkDiv>
     )
 };

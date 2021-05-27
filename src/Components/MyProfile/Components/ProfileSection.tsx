@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import {Colors} from "../../../styledHelpers/Colors";
 
 
-
 const ProfileSectionsDiv = styled.div`
     display: flex;
     background-color: whitesmoke;

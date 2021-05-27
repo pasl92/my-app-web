@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import {Colors} from "../../../styledHelpers/Colors";
 import {fontSize} from "../../../styledHelpers/FontSizes";
@@ -65,16 +65,50 @@ const FooterLatestPublications = styled.div`
     }
 `
 
+const PublicationTextUser = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+const UserDiv = styled.div`
+    color: ${Colors.grey};
+    font-size: ${fontSize[12]};
+    margin-top: 3%;
+    margin-left: 2%;
+`
+
+type PublicationType = {
+    title: string;
+    body: string;
+ }
+
 export const LatestPublications: FC = () => {
+
+    const [apiData0, setApiData0] = useState<PublicationType>()
+    useEffect(()=> {
+        fetch("https://jsonplaceholder.typicode.com/posts/1").then(res=>res.json()).then(json=>setApiData0(json))
+     }, [])
+
+     const [apiData1, setApiData1] = useState<PublicationType>()
+    useEffect(()=> {
+        fetch("https://jsonplaceholder.typicode.com/posts/2").then(res=>res.json()).then(json=>setApiData1(json))
+     }, [])
+
+     const [apiData2, setApiData2] = useState<PublicationType>()
+    useEffect(()=> {
+        fetch("https://jsonplaceholder.typicode.com/posts/3").then(res=>res.json()).then(json=>setApiData2(json))
+     }, [])
+
+
     return(
         <LatestPublicationsDiv>
-                <LeftSite><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... </p></LeftSite>
+                <LeftSite><p>{apiData0?.body}</p></LeftSite>
                 <RightSite>
                     <TitleLatestPublications>Latest publications</TitleLatestPublications>
                     <LastPublicationsWrapper>
-                        <Publication> <img src= "testimagepublications.png"></img> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p></Publication>
-                        <Publication> <img src= "testimagepublications.png"></img> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p></Publication>
-                        <Publication> <img src= "testimagepublications.png"></img> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p></Publication>
+                        <Publication> <img src= "testimagepublications.png"></img><PublicationTextUser><p>{apiData0?.body}</p> <UserDiv>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</UserDiv></PublicationTextUser></Publication>
+                        <Publication> <img src= "testimagepublications.png"></img> <PublicationTextUser><p>{apiData1?.body}</p> <UserDiv>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</UserDiv></PublicationTextUser> </Publication>
+                        <Publication> <img src= "testimagepublications.png"></img> <PublicationTextUser><p>{apiData2?.body}</p> <UserDiv>Subsid.corp.   +   Client contact   +   Update 3 days aqo by John doe</UserDiv></PublicationTextUser></Publication>
                     </LastPublicationsWrapper>
                     <FooterLatestPublications><a href="Publications"> See more publications</a></FooterLatestPublications>
                 </RightSite>
