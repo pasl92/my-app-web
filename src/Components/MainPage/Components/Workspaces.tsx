@@ -49,7 +49,9 @@ const Post = styled.div`
         max-height: 100%;    
         }
     p{
+        font-weight: bold;
         margin: 1%;
+        margin-right: 6%;
         margin-bottom: 10%;
     }
 `
@@ -59,9 +61,9 @@ export const Workspaces: FC = () => {
       <WorkspacesDiv>
               <WorkspacesTitle>Workspaces</WorkspacesTitle>
                   <WorkspacesDataDiv>
-                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
-                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
-                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
+                      <Post>  <img src='./testImage.png'></img> <p>Client contact</p></Post>
+                      <Post>  <img src='./testImage.png'></img> <p>Supplier contact</p></Post>
+                      <Post>  <img src='./testImage.png'></img> <p>Corporate</p></Post>
                       <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
                       <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
                       <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>

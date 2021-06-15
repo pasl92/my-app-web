@@ -87,29 +87,29 @@ export const DropDownMenu: FC = () => {
                     'Publication'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem>  <img src='./icons/publications.png'/> <a href="testsite">Publication</a></MenuItem>
                 }
                 {
-                    'People'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/people.png'/> <a href="people">People</a> </MenuItem>
+                    'People'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/people.png'/> <a href="TestSite">People</a> </MenuItem>
                 }
                 {
                     'Entities'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/entities2.png'/> <a href="entities">Entities</a></MenuItem>
                 }
                 {
-                    'Administration'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/administration.png'/> <a href="administration">Administration</a></MenuItem>
+                    'Administration'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/administration.png'/> <a href="TestSite">Administration</a></MenuItem>
                 }
                 <TitleMenuItem><p>Workspaces</p></TitleMenuItem>
                 {
-                    'Client contract'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/entities2.png'/> <a href="client_contract">Client contract</a></MenuItem>
+                    'Client contract'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/entities2.png'/> <a href="TestSite">Client contract</a></MenuItem>
                 }
                 {
-                    'Supplier contract'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/entities2.png'/> <a href="supplier_contract">Supplier contract</a></MenuItem>
+                    'Supplier contract'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/entities2.png'/> <a href="TestSite">Supplier contract</a></MenuItem>
                 }
                 {
-                    'Corporate'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/entities.png'/> <a href="corporate">Corporate</a></MenuItem>
+                    'Corporate'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/entities.png'/> <a href="TestSite">Corporate</a></MenuItem>
                 }
                 {
-                    'Group norms'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/people.png'/> <a href="group_norms">Group norms</a> </MenuItem>
+                    'Group norms'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/people.png'/> <a href="TestSite">Group norms</a> </MenuItem>
                 }
                 {
-                    'Real estate contracts'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/entities.png'/> <a href="real_estate_contracts">Real estate contracts</a></MenuItem>
+                    'Real estate contracts'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/entities.png'/> <a href="TestSite">Real estate contracts</a></MenuItem>
                 }
                 
             </InnerWarpper>
@@ -117,7 +117,7 @@ export const DropDownMenu: FC = () => {
                     <hr></hr>
                     <TitleMenuItem><p>Account</p></TitleMenuItem>
                         {
-                            <MenuItem> <img src='./testimagepublications.png'/> <a href="Profile">Profile</a></MenuItem>
+                            <MenuItem> <img src='./testimagepublications.png'/> <a href="MyProfile">Profile</a></MenuItem>
                         }
                         {
                             <MenuItem> <img src='./icons/privacy.png'/> <a href="testsite">Privacy</a></MenuItem>
