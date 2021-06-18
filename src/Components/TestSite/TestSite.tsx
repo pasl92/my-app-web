@@ -4,7 +4,6 @@ import {Colors} from "../../styledHelpers/Colors";
 
 const Wrapper =styled.div`
     display: flex;
-
 `;
 
 const Ntdh =styled.div`

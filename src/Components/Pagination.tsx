@@ -14,7 +14,7 @@ const Pagi = styled.div`
     margin: 1%;
 `  
 
-const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+const Pagination = ({site, postsPerPage, totalPosts, paginate }) => {
   const pageNumbers: number [] = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
@@ -26,7 +26,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
       <PaginationDiv>
         {pageNumbers.map(number => (
           <Pagi key={number} className='page-item'>
-            <a onClick={() => paginate(number)} href='MainPage' className='page-link'>
+            <a onClick={() => paginate(number)} href={site} className='page-link'>
               {number}
             </a>
             </Pagi>

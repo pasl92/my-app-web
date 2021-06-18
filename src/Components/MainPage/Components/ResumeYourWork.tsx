@@ -70,6 +70,7 @@ export const ResumeYourWork: FC = () => {
 
                 <Posts posts={currentPosts} loading={loading}></Posts>
                     <Pagination
+                            site="MainPage"
                             postsPerPage={postsPerPage}
                             totalPosts={posts.length}
                             paginate={paginate}/>
