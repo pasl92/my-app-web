@@ -8,7 +8,7 @@ const EntitieSection = styled.div`
     background-color: whitesmoke;
     margin: 0.5%;
     display: flex;
-    width: 270px;
+    width: 96.5%;
     height: 150px;
     padding: 0.5%;
     box-shadow: 0px 2px 5px ${Colors.black};
@@ -24,8 +24,6 @@ const PostsSectionTitle = styled.div`
     margin-bottom: 0.5%;
 `;
 
-const PostsSectionText = styled.div`
-`;
 
 const PostsSectionBottom = styled.div`
     color: ${Colors.grey};
@@ -35,7 +33,7 @@ const PostsSectionBottom = styled.div`
 
 const EntitieDiv = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
         
 `;
@@ -51,7 +49,7 @@ const EntitieRightSewction = styled.div`
     margin: 2%;
 `;
 
-const Entitie = ({entities, loading} : {entities: any[], loading: boolean}) =>
+const EntitieList = ({entities, loading} : {entities: any[], loading: boolean}) =>
 {
   if (loading) {
     return <h2>Loading...</h2>;
@@ -74,4 +72,4 @@ const Entitie = ({entities, loading} : {entities: any[], loading: boolean}) =>
   );
 };
 
-export default Entitie;
+export default EntitieList;

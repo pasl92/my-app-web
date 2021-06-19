@@ -16,7 +16,7 @@ var PostsSectionBottom = styled_components_1["default"].div(templateObject_4 || 
 var EntitieDiv = styled_components_1["default"].div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n        \n"], ["\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n        \n"])));
 var EntitiePhoto = styled_components_1["default"].div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n\n"], ["\n\n"])));
 var EntitieRightSewction = styled_components_1["default"].div(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    margin: 2%;\n"], ["\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    margin: 2%;\n"])));
-var Entitie = function (_a) {
+var EntitieMosaic = function (_a) {
     var entities = _a.entities, loading = _a.loading;
     if (loading) {
         return react_1["default"].createElement("h2", null, "Loading...");
@@ -29,5 +29,5 @@ var Entitie = function (_a) {
             react_1["default"].createElement(PostsSectionTitle, null, lodash_1["default"].sample(companyName)),
             react_1["default"].createElement(PostsSectionBottom, null, "Caracas 1050,Distrito Capital")))); })));
 };
-exports["default"] = Entitie;
+exports["default"] = EntitieMosaic;
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7;

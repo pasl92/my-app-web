@@ -7,7 +7,8 @@ import Pagination from '../../Components/Pagination';
 import {Colors} from "../../styledHelpers/Colors";
 import {fontSize} from "../../styledHelpers/FontSizes";
 import axios from 'axios';
-import Entitie from '../../Components/Entitie';
+import EntitieMosaic from '../EntitieMosaic';
+import EntitieList from '../EntitieList';
 
 const Wrapper =styled.div`
     display: flex;
@@ -51,21 +52,6 @@ const EntitiesFiltersDiv = styled.div`
     padding: 0.5%;
 `;
 
-const LeftMiddleSection = styled.div`
-    margin: 1%;
-`;
-
-const RightMiddleSection = styled.div`
-    margin: 1%;
-`;
-
-const AllEntities =styled.div`
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-`
 
 export const Entities: FC = () => {
 
@@ -86,27 +72,28 @@ export const Entities: FC = () => {
         fetchPosts();
         }, []);
 
-        // Get current posts
         const indexOfLastPost = currentPage * entitiesPerPage;
         const indexOfFirstPost = indexOfLastPost - entitiesPerPage;
         const currentPosts = entities.slice(indexOfFirstPost, indexOfLastPost);
 
-         // Change page
-         const paginate = pageNumber => setCurrentPage(pageNumber);
+        //true grid
+
+        const [isVisible, setVisible] = useState(true);
+
 
 
     return(
         <Wrapper>
             <UpperSection>
                 <EntitiesSettingsDiv>Entities  <img src='./icons/cog.png'></img></EntitiesSettingsDiv>
-                <EntitiesFiltersDiv><UpperButtons><button type="button"><img src='./icons/mosaic.png'/></button><button type="button"><img src='./icons/hamburger.png'/></button></UpperButtons></EntitiesFiltersDiv>
+                <EntitiesFiltersDiv><UpperButtons><button type="button" onClick={() => setVisible(true)}><img src='./icons/mosaic.png' id='mosaicButton' /></button>
+                <button type="button" onClick={() => setVisible(false)}><img src='./icons/hamburger.png' id='hamburgerButton'/></button></UpperButtons></EntitiesFiltersDiv>
             </UpperSection>
-            <MiddleSection>
-                <LeftMiddleSection>Test TesT</LeftMiddleSection>
-                <RightMiddleSection>tEST</RightMiddleSection>
-            </MiddleSection>
+
             <BottomSection>
-                <Entitie entities={currentPosts} loading={loading}></Entitie>
+                {isVisible ? <EntitieMosaic entities={currentPosts} loading={loading}></EntitieMosaic> : <EntitieList entities={currentPosts} loading={loading}></EntitieList>}
+                
+                
             </BottomSection>
         </Wrapper>
     )
