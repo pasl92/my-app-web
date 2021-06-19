@@ -11,6 +11,7 @@ var ExpertiseSection_1 = require("../MyProfile/Components/ExpertiseSection");
 var PanelInformations_1 = require("../MyProfile/Components/PanelInformations");
 var Proposals_1 = require("../MyProfile/Components/Proposals");
 var InternalReviews_1 = require("../MyProfile/Components/InternalReviews");
+var AmountOfFees_1 = require("../MyProfile/Components/AmountOfFees");
 var Colors_1 = require("../../styledHelpers/Colors");
 var Wrapper = styled_components_1["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    background-color: whitesmoke;\n    display: flex;\n    flex-direction: column;\n    width: 40%;\n    margin: 1%;\n    box-shadow: 0px 4px 4px ", ";\n"], ["\n    background-color: whitesmoke;\n    display: flex;\n    flex-direction: column;\n    width: 40%;\n    margin: 1%;\n    box-shadow: 0px 4px 4px ", ";\n"])), Colors_1.Colors.black);
 exports.MyProfile = function () {
@@ -19,6 +20,7 @@ exports.MyProfile = function () {
         React.createElement(ExpertiseSection_1.ExpertiseSections, null),
         React.createElement(PanelInformations_1.PanelInformations, null),
         React.createElement(Proposals_1.Proposals, null),
-        React.createElement(InternalReviews_1.InternalReviews, null)));
+        React.createElement(InternalReviews_1.InternalReviews, null),
+        React.createElement(AmountOfFees_1.AmountOfFees, null)));
 };
 var templateObject_1;

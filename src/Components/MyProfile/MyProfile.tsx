@@ -5,6 +5,7 @@ import { ExpertiseSections } from '../MyProfile/Components/ExpertiseSection';
 import { PanelInformations } from '../MyProfile/Components/PanelInformations';
 import { Proposals } from '../MyProfile/Components/Proposals';
 import { InternalReviews } from '../MyProfile/Components/InternalReviews';
+import { AmountOfFees } from '../MyProfile/Components/AmountOfFees';
 import {Colors} from "../../styledHelpers/Colors";
 
 
@@ -27,6 +28,7 @@ export const MyProfile: FC = () => {
             <PanelInformations></PanelInformations>
             <Proposals></Proposals>
             <InternalReviews></InternalReviews>
+            <AmountOfFees></AmountOfFees>
         </Wrapper>
     )
 };
