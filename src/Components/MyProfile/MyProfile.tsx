@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ProfileSections } from '../MyProfile/Components/ProfileSection';
 import { ExpertiseSections } from '../MyProfile/Components/ExpertiseSection';
 import { PanelInformations } from '../MyProfile/Components/PanelInformations';
+import { Proposals } from '../MyProfile/Components/Proposals';
 import {Colors} from "../../styledHelpers/Colors";
 
 
@@ -23,6 +24,7 @@ export const MyProfile: FC = () => {
             <ProfileSections></ProfileSections>
             <ExpertiseSections></ExpertiseSections>
             <PanelInformations></PanelInformations>
+            <Proposals></Proposals>
         </Wrapper>
     )
 };
