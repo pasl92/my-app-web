@@ -12,15 +12,17 @@ import Entitie from '../../Components/Entitie';
 const Wrapper =styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 3%;
-    width: 70%;
+    margin-top: 1%;
+    width: 80%;
+    margin-left: 1%;
 `;
 
 const UpperSection = styled.div`
     width: 100%;
-    background-color: gray;
+    background-color: whitesmoke;
     display: flex;
     justify-content: space-between;
+    font-weight: bold;
 `;
 
 const MiddleSection = styled.div`
@@ -60,10 +62,11 @@ const AllEntities =styled.div`
 
 export const Entities: FC = () => {
 
+    
     const [entities, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [entitiesPerPage] = useState(24);
+    const [entitiesPerPage] = useState(20);
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -88,7 +91,7 @@ export const Entities: FC = () => {
     return(
         <Wrapper>
             <UpperSection>
-                <EntitiesSettingsDiv>Entities *</EntitiesSettingsDiv>
+                <EntitiesSettingsDiv>Entities  <img src='./icons/cog.png'></img></EntitiesSettingsDiv>
                 <EntitiesFiltersDiv>Filtry</EntitiesFiltersDiv>
             </UpperSection>
             <MiddleSection>
@@ -96,12 +99,7 @@ export const Entities: FC = () => {
                 <RightMiddleSection>tEST</RightMiddleSection>
             </MiddleSection>
             <BottomSection>
-                <AllEntities><Entitie entities={currentPosts} loading={loading}></Entitie></AllEntities>
-                        <Pagination
-                                site="Entities"
-                                postsPerPage={entitiesPerPage}
-                                totalPosts={entities.length}
-                                paginate={paginate}/>
+                <Entitie entities={currentPosts} loading={loading}></Entitie>
             </BottomSection>
         </Wrapper>
     )

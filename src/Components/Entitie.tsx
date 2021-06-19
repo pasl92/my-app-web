@@ -2,17 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import {Colors} from "../styledHelpers/Colors";
 import {fontSize} from "../styledHelpers/FontSizes";
+import _ from "lodash";
 
 const EntitieSection = styled.div`
-    margin: 1%;
+    background-color: whitesmoke;
+    margin: 0.5%;
     display: flex;
-    flex-wrap: wrap;
-    width: 150px;
-    height: 100px;
+    width: 270px;
+    height: 150px;
     padding: 0.5%;
-    margin-bottom: 0.5%;
-    margin-left: 1%;
-    margin-right: 1%;
     box-shadow: 0px 2px 5px ${Colors.black};
     &:hover {
             box-shadow: 0px 4px 20px ${Colors.black};
@@ -35,22 +33,44 @@ const PostsSectionBottom = styled.div`
     margin-top: 0.5%;
 `;
 
+const EntitieDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+        
+`;
+
+const EntitiePhoto = styled.div`
+
+`;
+
+const EntitieRightSewction = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2%;
+`;
+
 const Entitie = ({entities, loading} : {entities: any[], loading: boolean}) =>
 {
   if (loading) {
     return <h2>Loading...</h2>;
   }
 
+  const companyName = [ 'Subsid Corp ltd', 'World Company SAS'];
+
   return (
-    <div>
+    <EntitieDiv>
       {entities.map(entities => (
           <EntitieSection key={entities.id} className='list-group-item'>
-            <PostsSectionTitle>{entities.title}</PostsSectionTitle>
-            <PostsSectionText>{entities.body}</PostsSectionText>
-            <PostsSectionBottom>Caracas 1050,Distrito Capital</PostsSectionBottom>
+            <EntitiePhoto><img src={entities.thumbnailUrl}></img></EntitiePhoto>
+              <EntitieRightSewction>
+                <PostsSectionTitle>{_.sample(companyName)}</PostsSectionTitle>
+                <PostsSectionBottom>Caracas 1050,Distrito Capital</PostsSectionBottom>
+              </EntitieRightSewction>
         </EntitieSection>
         ))}
-    </div>
+    </EntitieDiv>
   );
 };
 
