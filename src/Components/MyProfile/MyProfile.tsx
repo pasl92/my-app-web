@@ -1,14 +1,17 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-
 import { ProfileSections } from '../MyProfile/Components/ProfileSection';
+import { ExpertiseSections } from '../MyProfile/Components/ExpertiseSection';
+import {Colors} from "../../styledHelpers/Colors";
+
 
 const Wrapper = styled.div`
-background-color: whitesmoke;
+    background-color: whitesmoke;
     display: flex;
+    flex-direction: column;
     width: 40%;
     margin: 1%;
-    margin-right:3%;
+    box-shadow: 0px 4px 4px ${Colors.black};
 `;
 
 
@@ -17,6 +20,7 @@ export const MyProfile: FC = () => {
     return(
         <Wrapper>
             <ProfileSections></ProfileSections>
+            <ExpertiseSections></ExpertiseSections>
         </Wrapper>
     )
 };

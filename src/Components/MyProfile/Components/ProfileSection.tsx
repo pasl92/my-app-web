@@ -6,9 +6,7 @@ import { FC, useState, useEffect } from 'react';
 
 
 const ProfileSectionsDiv = styled.div`
-    width: 100%;
     display: flex;
-    box-shadow: 0px 5px 5px ${Colors.black};
     flex-direction: column;
     padding: 3%;
 `;
@@ -23,6 +21,7 @@ const TopSection = styled.div`
     }
     img{
         margin-left: 1%;
+        width: 15px;
     }
 `
 
@@ -46,8 +45,10 @@ const PhotoUserDiv = styled.div`
     }
     a{
         text-decoration:none;
-        margin-left: 3%;
+        margin-left: 1%;
         margin-top: 4%;
+        color: ${Colors.lightBlue};
+        font-weight: 600;
     }
 `
 
@@ -81,6 +82,10 @@ const ButttonSection = styled.div`
 const EmailSection = styled.div`
 `;
 
+const ExitIcon = styled.div`
+    margin-left: 3%;
+`;
+
 type UserType = {
     title: string;
     name: string;
@@ -105,7 +110,7 @@ export const ProfileSections: FC = () => {
     return(
         <ProfileSectionsDiv>
                 <TopSection>
-                    <img src= "./icons/comments.png"/><p>Message</p><img src= "./icons/plus.png"/><p>Create a request</p><img src= "./icons/bell.png"/><p>Add to a cluster</p><img src= "./icons/bell.png"/>
+                    <img src= "./icons/comments.png"/><p>Message</p><img src= "./icons/plus.png"/><p>Create a request</p><img src= "./icons/bell.png"/><p>Add to a cluster</p><ExitIcon><img src= "./icons/close.png"/></ExitIcon>
                 </TopSection>
 
                 <BottomSection>

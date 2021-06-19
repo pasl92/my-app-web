@@ -7,9 +7,12 @@ exports.__esModule = true;
 exports.MyProfile = void 0;
 var styled_components_1 = require("styled-components");
 var ProfileSection_1 = require("../MyProfile/Components/ProfileSection");
-var Wrapper = styled_components_1["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\nbackground-color: whitesmoke;\n    display: flex;\n    width: 40%;\n    margin: 1%;\n    margin-right:3%;\n"], ["\nbackground-color: whitesmoke;\n    display: flex;\n    width: 40%;\n    margin: 1%;\n    margin-right:3%;\n"])));
+var ExpertiseSection_1 = require("../MyProfile/Components/ExpertiseSection");
+var Colors_1 = require("../../styledHelpers/Colors");
+var Wrapper = styled_components_1["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    background-color: whitesmoke;\n    display: flex;\n    flex-direction: column;\n    width: 40%;\n    margin: 1%;\n    box-shadow: 0px 4px 4px ", ";\n"], ["\n    background-color: whitesmoke;\n    display: flex;\n    flex-direction: column;\n    width: 40%;\n    margin: 1%;\n    box-shadow: 0px 4px 4px ", ";\n"])), Colors_1.Colors.black);
 exports.MyProfile = function () {
     return (React.createElement(Wrapper, null,
-        React.createElement(ProfileSection_1.ProfileSections, null)));
+        React.createElement(ProfileSection_1.ProfileSections, null),
+        React.createElement(ExpertiseSection_1.ExpertiseSections, null)));
 };
 var templateObject_1;
