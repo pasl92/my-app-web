@@ -45,6 +45,7 @@ const Post = styled.div`
         } 
     
     img{
+        min-height: 80%;
         max-width: 100%;
         max-height: 100%;    
         }
@@ -64,9 +65,9 @@ export const Workspaces: FC = () => {
       <WorkspacesDiv>
               <WorkspacesTitle>Workspaces</WorkspacesTitle>
                   <WorkspacesDataDiv>
-                      <Post>  <img src='./testImage.png'></img> <a href="WorkspacesSite"> <p>Client contact</p> </a> </Post>
-                      <Post>  <img src='./testImage.png'></img> <a href="WorkspacesSite"> <p>Supplier contact</p> </a></Post>
-                      <Post>  <img src='./testImage.png'></img> <a href="WorkspacesSite"> <p>Corporate</p> </a></Post>
+                      <Post>  <img src='./panoramic1.png'></img> <a href="WorkspacesSite"> <p>Client contact</p> </a> </Post>
+                      <Post>  <img src='./panoramic2.png'></img> <a href="WorkspacesSite"> <p>Supplier contact</p> </a></Post>
+                      <Post>  <img src='./panoramic3.png'></img> <a href="WorkspacesSite"> <p>Corporate</p> </a></Post>
                       <Post>  <img src='./testImage.png'></img> <a href="TestSite"> <p>Test</p> </a></Post>
                       <Post>  <img src='./testImage.png'></img> <a href="TestSite"> <p>Test</p> </a></Post>
                       <Post>  <img src='./testImage.png'></img> <a href="TestSite"> <p>Test</p> </a></Post>
