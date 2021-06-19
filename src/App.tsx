@@ -7,6 +7,7 @@ import { LeftMenu } from '../src/Components/LeftMenu/LeftMenu';
 import { MainPage } from '../src/Components/MainPage/MainPage';
 import { TestSite } from '../src/Components/TestSite/TestSite';
 import { Entities } from '../src/Components/Entities/Entities';
+import { WorkspacesSite } from '../src/Components/WorkspacesSite/WorkspacesSite';
 import { Publications } from '../src/Components/Publications/Publications';
 import { Users } from '../src/Components/Data/GetUsers';
 import { MyProfile } from './Components/MyProfile/MyProfile';
@@ -60,6 +61,10 @@ const App: FC = () => {
 
                     <Route path="/Entities" exact>
                       <Entities/>
+                    </Route>
+
+                    <Route path="/WorkspacesSite" exact>
+                      <WorkspacesSite/>
                     </Route>
 
 

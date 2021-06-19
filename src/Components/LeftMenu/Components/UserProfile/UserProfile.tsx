@@ -197,7 +197,7 @@ const UserProfile: FC = () => {
 
                 <OtherSections>
                 <img src="./icons/entities.png"/>
-                <a href="testsite"> <p>Entities</p> </a>
+                <a href="Entities"> <p>Entities</p> </a>
                 </OtherSections>
 
             </UnderUserProfile>

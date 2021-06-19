@@ -69,7 +69,7 @@ var UserProfile = function () {
                     " ")),
             React.createElement(OtherSections, null,
                 React.createElement("img", { src: "./icons/entities.png" }),
-                React.createElement("a", { href: "testsite" },
+                React.createElement("a", { href: "Entities" },
                     " ",
                     React.createElement("p", null, "Entities"),
                     " ")))));

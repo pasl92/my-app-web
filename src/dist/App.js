@@ -11,6 +11,8 @@ var TopBar_1 = require("../src/Components/TopBar/TopBar");
 var LeftMenu_1 = require("../src/Components/LeftMenu/LeftMenu");
 var MainPage_1 = require("../src/Components/MainPage/MainPage");
 var TestSite_1 = require("../src/Components/TestSite/TestSite");
+var Entities_1 = require("../src/Components/Entities/Entities");
+var WorkspacesSite_1 = require("../src/Components/WorkspacesSite/WorkspacesSite");
 var Publications_1 = require("../src/Components/Publications/Publications");
 var MyProfile_1 = require("./Components/MyProfile/MyProfile");
 var react_router_dom_1 = require("react-router-dom");
@@ -32,7 +34,11 @@ var App = function () {
                         react_1["default"].createElement(react_router_dom_1.Route, { path: "/Publications", exact: true },
                             react_1["default"].createElement(Publications_1.Publications, null)),
                         react_1["default"].createElement(react_router_dom_1.Route, { path: "/MyProfile", exact: true },
-                            react_1["default"].createElement(MyProfile_1.MyProfile, null))))))));
+                            react_1["default"].createElement(MyProfile_1.MyProfile, null)),
+                        react_1["default"].createElement(react_router_dom_1.Route, { path: "/Entities", exact: true },
+                            react_1["default"].createElement(Entities_1.Entities, null)),
+                        react_1["default"].createElement(react_router_dom_1.Route, { path: "/WorkspacesSite", exact: true },
+                            react_1["default"].createElement(WorkspacesSite_1.WorkspacesSite, null))))))));
 };
 exports["default"] = App;
 var templateObject_1, templateObject_2;

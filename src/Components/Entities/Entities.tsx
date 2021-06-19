@@ -25,6 +25,13 @@ const UpperSection = styled.div`
     font-weight: bold;
 `;
 
+const UpperButtons = styled.div`
+    img{
+        height: 20px;
+    }
+
+`;
+
 const MiddleSection = styled.div`
     background-color: yellow;
     display: flex;
@@ -41,7 +48,7 @@ const EntitiesSettingsDiv = styled.div`
 `;
 
 const EntitiesFiltersDiv = styled.div`
-    margin: 1%;
+    padding: 0.5%;
 `;
 
 const LeftMiddleSection = styled.div`
@@ -92,7 +99,7 @@ export const Entities: FC = () => {
         <Wrapper>
             <UpperSection>
                 <EntitiesSettingsDiv>Entities  <img src='./icons/cog.png'></img></EntitiesSettingsDiv>
-                <EntitiesFiltersDiv>Filtry</EntitiesFiltersDiv>
+                <EntitiesFiltersDiv><UpperButtons><button type="button"><img src='./icons/mosaic.png'/></button><button type="button"><img src='./icons/hamburger.png'/></button></UpperButtons></EntitiesFiltersDiv>
             </UpperSection>
             <MiddleSection>
                 <LeftMiddleSection>Test TesT</LeftMiddleSection>

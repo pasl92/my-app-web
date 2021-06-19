@@ -48,11 +48,14 @@ const Post = styled.div`
         max-width: 100%;
         max-height: 100%;    
         }
-    p{
+
+    a{
+        text-decoration:none;
         font-weight: bold;
         margin: 1%;
         margin-right: 6%;
         margin-bottom: 10%;
+        margin-top: 2%;
     }
 `
 
@@ -61,18 +64,17 @@ export const Workspaces: FC = () => {
       <WorkspacesDiv>
               <WorkspacesTitle>Workspaces</WorkspacesTitle>
                   <WorkspacesDataDiv>
-                      <Post>  <img src='./testImage.png'></img> <p>Client contact</p></Post>
-                      <Post>  <img src='./testImage.png'></img> <p>Supplier contact</p></Post>
-                      <Post>  <img src='./testImage.png'></img> <p>Corporate</p></Post>
-                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
-                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
-                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
-                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
-                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
-                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
-                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
-                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
-                      <Post>  <img src='./testImage.png'></img> <p>Test</p></Post>
+                      <Post>  <img src='./testImage.png'></img> <a href="WorkspacesSite"> <p>Client contact</p> </a> </Post>
+                      <Post>  <img src='./testImage.png'></img> <a href="WorkspacesSite"> <p>Supplier contact</p> </a></Post>
+                      <Post>  <img src='./testImage.png'></img> <a href="WorkspacesSite"> <p>Corporate</p> </a></Post>
+                      <Post>  <img src='./testImage.png'></img> <a href="TestSite"> <p>Test</p> </a></Post>
+                      <Post>  <img src='./testImage.png'></img> <a href="TestSite"> <p>Test</p> </a></Post>
+                      <Post>  <img src='./testImage.png'></img> <a href="TestSite"> <p>Test</p> </a></Post>
+                      <Post>  <img src='./testImage.png'></img> <a href="TestSite"> <p>Test</p> </a></Post>
+                      <Post>  <img src='./testImage.png'></img> <a href="TestSite"> <p>Test</p> </a></Post>
+                      <Post>  <img src='./testImage.png'></img> <a href="TestSite"> <p>Test</p> </a></Post>
+                      <Post>  <img src='./testImage.png'></img> <a href="TestSite"> <p>Test</p> </a></Post>
+                      <Post>  <img src='./testImage.png'></img> <a href="TestSite"> <p>Test</p> </a></Post>
 
                   </WorkspacesDataDiv>
               
