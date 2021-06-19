@@ -9,7 +9,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     margin: 1%;
-    margin-right:1%;
+    margin-right: 5%;
 `
 
 const TopSection = styled.div`

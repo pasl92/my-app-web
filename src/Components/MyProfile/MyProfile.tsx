@@ -2,6 +2,7 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import { ProfileSections } from '../MyProfile/Components/ProfileSection';
 import { ExpertiseSections } from '../MyProfile/Components/ExpertiseSection';
+import { PanelInformations } from '../MyProfile/Components/PanelInformations';
 import {Colors} from "../../styledHelpers/Colors";
 
 
@@ -21,6 +22,7 @@ export const MyProfile: FC = () => {
         <Wrapper>
             <ProfileSections></ProfileSections>
             <ExpertiseSections></ExpertiseSections>
+            <PanelInformations></PanelInformations>
         </Wrapper>
     )
 };

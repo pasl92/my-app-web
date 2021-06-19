@@ -9,7 +9,7 @@ var styled_components_1 = require("styled-components");
 var ResumeYourWork_1 = require("../MainPage/Components/ResumeYourWork");
 var FontSizes_1 = require("../../styledHelpers/FontSizes");
 var Colors_1 = require("../../styledHelpers/Colors");
-var Wrapper = styled_components_1["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    display: flex;\n    flex-direction: column;\n    margin: 1%;\n    margin-right:1%;\n"], ["\n    display: flex;\n    flex-direction: column;\n    margin: 1%;\n    margin-right:1%;\n"])));
+var Wrapper = styled_components_1["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    display: flex;\n    flex-direction: column;\n    margin: 1%;\n    margin-right: 5%;\n"], ["\n    display: flex;\n    flex-direction: column;\n    margin: 1%;\n    margin-right: 5%;\n"])));
 var TopSection = styled_components_1["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    background-color: whitesmoke;\n    box-shadow: 0px 5px 5px ", ";\n"], ["\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    background-color: whitesmoke;\n    box-shadow: 0px 5px 5px ", ";\n"])), Colors_1.Colors.black);
 var TopPhoteSection = styled_components_1["default"].div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n    img{\n        width: 100%;\n        height: 300px;\n    }\n"], ["\n    img{\n        width: 100%;\n        height: 300px;\n    }\n"])));
 var TopTextSection = styled_components_1["default"].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n    \n"], ["\n    \n"])));
