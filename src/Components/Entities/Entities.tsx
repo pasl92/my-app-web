@@ -9,6 +9,7 @@ import {fontSize} from "../../styledHelpers/FontSizes";
 import axios from 'axios';
 import EntitieMosaic from '../EntitieMosaic';
 import EntitieList from '../EntitieList';
+import {Filters} from '../Entities/Filters';
 
 const Wrapper =styled.div`
     display: flex;
@@ -20,28 +21,35 @@ const Wrapper =styled.div`
 
 const UpperSection = styled.div`
     width: 100%;
-    background-color: whitesmoke;
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+    font-size: ${fontSize[24]};
 `;
 
 const UpperButtons = styled.div`
+    display: flex;
+    margin-right: 2%;
     img{
-        height: 20px;
+        height: 25px;
     }
-
+    button{
+        margin: 1%;
+        margin-right: 10px;
+    }
 `;
 
 const MiddleSection = styled.div`
-    background-color: yellow;
     display: flex;
     justify-content: space-between;
+    margin-left: 1%;
+    margin-bottom: 1%;
 `;
 
 const BottomSection = styled.div`
     display: flex;
     flex-direction: column;
+    margin-top: 1%;
 `;
 
 const EntitiesSettingsDiv = styled.div`
@@ -50,6 +58,12 @@ const EntitiesSettingsDiv = styled.div`
 
 const EntitiesFiltersDiv = styled.div`
     padding: 0.5%;
+`;
+
+const SettingsDiv = styled.div`
+    width: 99%;
+    box-shadow: 0px 2px 5px ${Colors.black};
+    background-color: whitesmoke;
 `;
 
 
@@ -84,16 +98,18 @@ export const Entities: FC = () => {
 
     return(
         <Wrapper>
-            <UpperSection>
-                <EntitiesSettingsDiv>Entities  <img src='./icons/cog.png'></img></EntitiesSettingsDiv>
-                <EntitiesFiltersDiv><UpperButtons><button type="button" onClick={() => setVisible(true)}><img src='./icons/mosaic.png' id='mosaicButton' /></button>
-                <button type="button" onClick={() => setVisible(false)}><img src='./icons/hamburger.png' id='hamburgerButton'/></button></UpperButtons></EntitiesFiltersDiv>
-            </UpperSection>
-
+            <SettingsDiv>
+                <UpperSection>
+                    <EntitiesSettingsDiv>Entities  <img src='./icons/cog.png'></img></EntitiesSettingsDiv>
+                    <EntitiesFiltersDiv><UpperButtons><button type="button" onClick={() => setVisible(true)}><img src='./icons/mosaic.png' id='mosaicButton' /></button>
+                    <button type="button" onClick={() => setVisible(false)}><img src='./icons/hamburger.png' id='hamburgerButton'/></button></UpperButtons></EntitiesFiltersDiv>
+                </UpperSection>
+                <MiddleSection><UpperButtons> <button type="button"><img src='./icons/filter.png' id='mosaicButton' /></button> </UpperButtons>
+                <Filters>Test</Filters>
+                </MiddleSection>
+            </SettingsDiv>
             <BottomSection>
                 {isVisible ? <EntitieMosaic entities={currentPosts} loading={loading}></EntitieMosaic> : <EntitieList entities={currentPosts} loading={loading}></EntitieList>}
-                
-                
             </BottomSection>
         </Wrapper>
     )

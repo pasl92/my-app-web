@@ -43,16 +43,20 @@ exports.__esModule = true;
 exports.Entities = void 0;
 var react_1 = require("react");
 var styled_components_1 = require("styled-components");
+var Colors_1 = require("../../styledHelpers/Colors");
+var FontSizes_1 = require("../../styledHelpers/FontSizes");
 var axios_1 = require("axios");
 var EntitieMosaic_1 = require("../EntitieMosaic");
 var EntitieList_1 = require("../EntitieList");
+var Filters_1 = require("../Entities/Filters");
 var Wrapper = styled_components_1["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    display: flex;\n    flex-direction: column;\n    margin-top: 1%;\n    width: 80%;\n    margin-left: 1%;\n"], ["\n    display: flex;\n    flex-direction: column;\n    margin-top: 1%;\n    width: 80%;\n    margin-left: 1%;\n"])));
-var UpperSection = styled_components_1["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    width: 100%;\n    background-color: whitesmoke;\n    display: flex;\n    justify-content: space-between;\n    font-weight: bold;\n"], ["\n    width: 100%;\n    background-color: whitesmoke;\n    display: flex;\n    justify-content: space-between;\n    font-weight: bold;\n"])));
-var UpperButtons = styled_components_1["default"].div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n    img{\n        height: 20px;\n    }\n\n"], ["\n    img{\n        height: 20px;\n    }\n\n"])));
-var MiddleSection = styled_components_1["default"].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n    background-color: yellow;\n    display: flex;\n    justify-content: space-between;\n"], ["\n    background-color: yellow;\n    display: flex;\n    justify-content: space-between;\n"])));
-var BottomSection = styled_components_1["default"].div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n    display: flex;\n    flex-direction: column;\n"], ["\n    display: flex;\n    flex-direction: column;\n"])));
+var UpperSection = styled_components_1["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    font-weight: bold;\n    font-size: ", ";\n"], ["\n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    font-weight: bold;\n    font-size: ", ";\n"])), FontSizes_1.fontSize[24]);
+var UpperButtons = styled_components_1["default"].div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n    display: flex;\n    margin-right: 2%;\n    img{\n        height: 25px;\n    }\n    button{\n        margin: 1%;\n        margin-right: 10px;\n    }\n"], ["\n    display: flex;\n    margin-right: 2%;\n    img{\n        height: 25px;\n    }\n    button{\n        margin: 1%;\n        margin-right: 10px;\n    }\n"])));
+var MiddleSection = styled_components_1["default"].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n    display: flex;\n    justify-content: space-between;\n    margin-left: 1%;\n    margin-bottom: 1%;\n"], ["\n    display: flex;\n    justify-content: space-between;\n    margin-left: 1%;\n    margin-bottom: 1%;\n"])));
+var BottomSection = styled_components_1["default"].div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n    display: flex;\n    flex-direction: column;\n    margin-top: 1%;\n"], ["\n    display: flex;\n    flex-direction: column;\n    margin-top: 1%;\n"])));
 var EntitiesSettingsDiv = styled_components_1["default"].div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n    margin: 1%;\n"], ["\n    margin: 1%;\n"])));
 var EntitiesFiltersDiv = styled_components_1["default"].div(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n    padding: 0.5%;\n"], ["\n    padding: 0.5%;\n"])));
+var SettingsDiv = styled_components_1["default"].div(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n    width: 99%;\n    box-shadow: 0px 2px 5px ", ";\n    background-color: whitesmoke;\n"], ["\n    width: 99%;\n    box-shadow: 0px 2px 5px ", ";\n    background-color: whitesmoke;\n"])), Colors_1.Colors.black);
 exports.Entities = function () {
     var _a = react_1.useState([]), entities = _a[0], setPosts = _a[1];
     var _b = react_1.useState(false), loading = _b[0], setLoading = _b[1];
@@ -82,16 +86,24 @@ exports.Entities = function () {
     //true grid
     var _d = react_1.useState(true), isVisible = _d[0], setVisible = _d[1];
     return (react_1["default"].createElement(Wrapper, null,
-        react_1["default"].createElement(UpperSection, null,
-            react_1["default"].createElement(EntitiesSettingsDiv, null,
-                "Entities  ",
-                react_1["default"].createElement("img", { src: './icons/cog.png' })),
-            react_1["default"].createElement(EntitiesFiltersDiv, null,
+        react_1["default"].createElement(SettingsDiv, null,
+            react_1["default"].createElement(UpperSection, null,
+                react_1["default"].createElement(EntitiesSettingsDiv, null,
+                    "Entities  ",
+                    react_1["default"].createElement("img", { src: './icons/cog.png' })),
+                react_1["default"].createElement(EntitiesFiltersDiv, null,
+                    react_1["default"].createElement(UpperButtons, null,
+                        react_1["default"].createElement("button", { type: "button", onClick: function () { return setVisible(true); } },
+                            react_1["default"].createElement("img", { src: './icons/mosaic.png', id: 'mosaicButton' })),
+                        react_1["default"].createElement("button", { type: "button", onClick: function () { return setVisible(false); } },
+                            react_1["default"].createElement("img", { src: './icons/hamburger.png', id: 'hamburgerButton' }))))),
+            react_1["default"].createElement(MiddleSection, null,
                 react_1["default"].createElement(UpperButtons, null,
-                    react_1["default"].createElement("button", { type: "button", onClick: function () { return setVisible(true); } },
-                        react_1["default"].createElement("img", { src: './icons/mosaic.png', id: 'mosaicButton' })),
-                    react_1["default"].createElement("button", { type: "button", onClick: function () { return setVisible(false); } },
-                        react_1["default"].createElement("img", { src: './icons/hamburger.png', id: 'hamburgerButton' }))))),
+                    " ",
+                    react_1["default"].createElement("button", { type: "button" },
+                        react_1["default"].createElement("img", { src: './icons/filter.png', id: 'mosaicButton' })),
+                    " "),
+                react_1["default"].createElement(Filters_1.Filters, null, "Test"))),
         react_1["default"].createElement(BottomSection, null, isVisible ? react_1["default"].createElement(EntitieMosaic_1["default"], { entities: currentPosts, loading: loading }) : react_1["default"].createElement(EntitieList_1["default"], { entities: currentPosts, loading: loading }))));
 };
-var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7;
+var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8;
