@@ -10,6 +10,7 @@ import axios from 'axios';
 import EntitieMosaic from '../EntitieMosaic';
 import EntitieList from '../EntitieList';
 import {Filters} from '../Entities/Filters';
+import useDropdown from 'react-dropdown-hook';
 
 const Wrapper =styled.div`
     display: flex;
@@ -66,6 +67,8 @@ const SettingsDiv = styled.div`
     background-color: whitesmoke;
 `;
 
+const FilterDiv = styled.div`
+`;
 
 export const Entities: FC = () => {
 
@@ -94,6 +97,13 @@ export const Entities: FC = () => {
 
         const [isVisible, setVisible] = useState(true);
 
+        const[wrappRef, dropdownOpen, toggleDropdown] = useDropdown();
+
+        const menuHandler = () => {
+            toggleDropdown();
+    }
+
+
 
 
     return(
@@ -104,9 +114,9 @@ export const Entities: FC = () => {
                     <EntitiesFiltersDiv><UpperButtons><button type="button" onClick={() => setVisible(true)}><img src='./icons/mosaic.png' id='mosaicButton' /></button>
                     <button type="button" onClick={() => setVisible(false)}><img src='./icons/hamburger.png' id='hamburgerButton'/></button></UpperButtons></EntitiesFiltersDiv>
                 </UpperSection>
-                <MiddleSection><UpperButtons> <button type="button"><img src='./icons/filter.png' id='mosaicButton' /></button> </UpperButtons>
-                <Filters>Test</Filters>
-                </MiddleSection>
+                <MiddleSection><UpperButtons><FilterDiv ref={wrappRef} onClick={menuHandler}> <button type="button" ><img src='./icons/filter.png' id='mosaicButton' /></button> </FilterDiv> </UpperButtons>
+                {dropdownOpen && <Filters></Filters>}
+                </MiddleSection >
             </SettingsDiv>
             <BottomSection>
                 {isVisible ? <EntitieMosaic entities={currentPosts} loading={loading}></EntitieMosaic> : <EntitieList entities={currentPosts} loading={loading}></EntitieList>}
