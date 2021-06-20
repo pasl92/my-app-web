@@ -12,6 +12,10 @@ const EntitieSection = styled.div`
     height: 150px;
     padding: 0.5%;
     box-shadow: 0px 2px 5px ${Colors.black};
+    border-radius: 10px;
+    img{
+      border-radius: 10px;
+    }
     &:hover {
             box-shadow: 0px 4px 20px ${Colors.black};
         } 

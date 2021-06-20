@@ -16,6 +16,7 @@ const Wrapper = styled.div`
     width: 40%;
     margin: 1%;
     box-shadow: 0px 4px 4px ${Colors.black};
+    border-radius: 10px;
 `;
 
 

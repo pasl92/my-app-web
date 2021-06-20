@@ -51,8 +51,6 @@ var PublicationsSite = styled_components_1["default"].div(templateObject_2 || (t
 exports.Publications = function () {
     var _a = react_1.useState([]), entities = _a[0], setPosts = _a[1];
     var _b = react_1.useState(false), loading = _b[0], setLoading = _b[1];
-    var _c = react_1.useState(1), currentPage = _c[0], setCurrentPage = _c[1];
-    var entitiesPerPage = react_1.useState(20)[0];
     react_1.useEffect(function () {
         var fetchPosts = function () { return __awaiter(void 0, void 0, void 0, function () {
             var res;
@@ -71,11 +69,8 @@ exports.Publications = function () {
         }); };
         fetchPosts();
     }, []);
-    var indexOfLastPost = currentPage * entitiesPerPage;
-    var indexOfFirstPost = indexOfLastPost - entitiesPerPage;
-    var currentPosts = entities.slice(indexOfFirstPost, indexOfLastPost);
     return (react_1["default"].createElement(Wrapper, null,
         react_1["default"].createElement(PublicationsSite, null,
-            react_1["default"].createElement(Publication_1["default"], { publication: currentPosts, loading: loading }))));
+            react_1["default"].createElement(Publication_1["default"], { publication: entities, loading: loading }))));
 };
 var templateObject_1, templateObject_2;

@@ -10,15 +10,19 @@ const Wrapper =styled.div`
     box-shadow: 1px 1px 12px ${Colors.black};
     display: flex;
     background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 `;
 
 const LeftSection =styled.div`
     display: flex;
     width: 20%;
     padding-left: 1%;
+    margin-right: 1%;
     align-items: center;
         &:hover {
             box-shadow: inset 0px 0px 190px -42px rgba(0,0,0,0.2);
+            border-radius: 10px;
         }  
 `;
 

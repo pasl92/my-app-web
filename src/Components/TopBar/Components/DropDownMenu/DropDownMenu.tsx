@@ -8,6 +8,7 @@ const Wrapper = styled.div`
     left: 16%;
     background-color: white;
     border:1px solid gray;
+    border-radius: 10px;
     #filterInput{
         width:100%;
         height:50px;
@@ -19,6 +20,9 @@ const Wrapper = styled.div`
         width: 80%;
         font-size: ${fontSize[18]};
         outline:none;
+        border-radius: 10px;
+        padding: 1%;
+        padding-left: 7%;
         }
     }
 `;
@@ -26,7 +30,11 @@ const Wrapper = styled.div`
 const InnerWarpper = styled.div`
     overflow-y: scroll;
     max-height: 250px;
-    
+    text-decoration: none;
+    a {
+        text-decoration:none;
+        color: black;
+        }
 `;
 
 const MenuItem = styled.div`
@@ -35,7 +43,11 @@ const MenuItem = styled.div`
     justify-content:start;
     align-items:center;
     margin: 2%;
+    padding: 1%;
+    padding-right: 2%;
+    padding-left: 2%;
     text-decoration: none;
+    border-radius: 10px;
     a {
         text-decoration:none;
         color: black;
@@ -44,6 +56,7 @@ const MenuItem = styled.div`
         height: 25px;
         width:25px;
         margin-right: 20px;
+        border-radius: 4px;
     }
     p{
         margin: 2px 2px;
@@ -81,7 +94,7 @@ export const DropDownMenu: FC = () => {
             <InnerWarpper>
                 <TitleMenuItem><p>Platform</p></TitleMenuItem>
                 {
-                    'Home'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem ><img src='./icons/house2.png'/><a href="MainPage">Home</a></MenuItem>
+                    'Home'.toLowerCase().includes(inputText.toLowerCase()) && <a href="MainPage"><MenuItem  onClick={()=> "myhref('MainPage');"}><img src='./icons/house2.png'/>Home</MenuItem></a>
                 }
                 {
                     'Publication'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem>  <img src='./icons/publications.png'/> <a href="Publications">Publication</a></MenuItem>

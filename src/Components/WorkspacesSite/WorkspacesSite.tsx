@@ -18,6 +18,11 @@ const TopSection = styled.div`
     flex-direction: column;
     background-color: whitesmoke;
     box-shadow: 0px 5px 5px ${Colors.black};
+    border-radius: 10px;
+    img{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
 `;
 
 const TopPhoteSection = styled.div`
@@ -37,7 +42,7 @@ const MiddleSection = styled.div`
     margin-top: 2%;
     background-color: whitesmoke;
     box-shadow: 0px 5px 5px ${Colors.black};
-
+    border-radius: 10px;
 `;
 
 const TitleMiddleDiv = styled.div`

@@ -30,6 +30,7 @@ const WorkspacesDataDiv = styled.div`
     -ms-overflow-style: -ms-autohiding-scrollbar; 
 `
 const Post = styled.div`
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     width: 20%;
@@ -47,7 +48,9 @@ const Post = styled.div`
     img{
         min-height: 80%;
         max-width: 100%;
-        max-height: 100%;    
+        max-height: 100%;   
+        border-top-left-radius: 10px; 
+        border-top-right-radius: 10px; 
         }
 
     a{

@@ -14,6 +14,7 @@ const Input = styled.input`
   text-align: center;
   font-family:Tahoma;
   font-size: 14px;
+  border-radius: 10px;
 `;
 
 const SearchIcon = styled.img`

@@ -15,6 +15,7 @@ const Wrapper = styled.div`
     border:1px solid gray;
     padding: 1%;
     box-shadow: 0px 2px 5px black;
+    border-radius: 10px;
 `;
 
 const TopSection = styled.div`

@@ -7,8 +7,11 @@ const LatestPublicationsDiv = styled.div`
     display: flex;
     background-color: whitesmoke;
     box-shadow: 0px 5px 5px ${Colors.black};
+    border-radius: 10px;
 `
 const LeftSite = styled.div`
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     background-image: url("testImage.png");
     box-shadow: inset 0px -174px 69px -41px rgba(0,0,0,0.52);
     width: 30%;

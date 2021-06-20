@@ -33,6 +33,7 @@ const UpperButtons = styled.div`
     margin-right: 2%;
     img{
         height: 25px;
+        
     }
     button{
         margin: 1%;
@@ -65,6 +66,7 @@ const SettingsDiv = styled.div`
     width: 99%;
     box-shadow: 0px 2px 5px ${Colors.black};
     background-color: whitesmoke;
+    border-radius: 10px;
 `;
 
 const FilterDiv = styled.div`

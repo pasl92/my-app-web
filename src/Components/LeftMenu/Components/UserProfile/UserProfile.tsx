@@ -21,7 +21,7 @@ const UserProfileWrapper = styled.div`
     background-color: white;
     flex-direction: column;
     box-shadow: 0px 5px 5px ${Colors.black};
-
+    border-radius: 5%;
     text-decoration: none;
     a {
         text-decoration:none;
@@ -76,12 +76,14 @@ const YourNetwork =styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3%;
+    margin: 2%;
     margin-left: 5%;
     margin-right: 5%;
+    padding: 2%;
     &:hover {
-            transition-delay: 0.2s;
-            font-size: ${fontSize[22]};
+            transition-delay: 0.1s;
+            background-color: lightgrey;
+            border-radius: 10px;
         } 
 `;
 
@@ -89,12 +91,14 @@ const YourPublications = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3%;
+    margin: 2%;
     margin-left: 5%;
     margin-right: 5%;
+    padding:2%;
     &:hover {
-            transition-delay: 0.2s;
-            font-size: ${fontSize[22]};
+            transition-delay: 0.1s;
+            background-color: lightgrey;
+            border-radius: 10px;
         }  
 `;
 
@@ -119,7 +123,7 @@ const OtherSections = styled.div`
     align-items: center;
     &:hover {
             transition-delay: 0.2s;
-            font-size: ${fontSize[22]};
+            font-weight: 600;
         } 
 
     p{

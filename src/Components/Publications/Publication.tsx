@@ -12,6 +12,7 @@ const EntitieSection = styled.div`
     height: 150px;
     padding: 0.5%;
     box-shadow: 0px 2px 5px ${Colors.black};
+    border-radius: 10px;
     &:hover {
             box-shadow: 0px 4px 20px ${Colors.black};
         } 
@@ -32,8 +33,9 @@ const LastPublicationsWrapper = styled.div`
 const PublicationDiv = styled.div`
     display: flex;
     padding: 1%;
+    border-radius: 10px;
     img{
-        width:10%;
+        width:8%;
         border-radius: 10px;
     }
     p{
