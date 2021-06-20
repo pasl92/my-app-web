@@ -14,7 +14,7 @@ var PostsSectionTitle = styled_components_1["default"].div(templateObject_2 || (
 var PostsSectionBottom = styled_components_1["default"].div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n    color: ", ";\n    font-size: ", ";\n    margin-top: 0.5%;\n"], ["\n    color: ", ";\n    font-size: ", ";\n    margin-top: 0.5%;\n"])), Colors_1.Colors.grey, FontSizes_1.fontSize[12]);
 var EntitieDiv = styled_components_1["default"].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n    display: flex;\n    flex-direction: column;\n    flex-wrap: wrap;\n        \n"], ["\n    display: flex;\n    flex-direction: column;\n    flex-wrap: wrap;\n        \n"])));
 var EntitiePhoto = styled_components_1["default"].div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n\n"], ["\n\n"])));
-var EntitieRightSewction = styled_components_1["default"].div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    margin: 2%;\n"], ["\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    margin: 2%;\n"])));
+var EntitieRightSection = styled_components_1["default"].div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    margin: 2%;\n"], ["\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    margin: 2%;\n"])));
 var EntitieList = function (_a) {
     var entities = _a.entities, loading = _a.loading;
     if (loading) {
@@ -24,7 +24,7 @@ var EntitieList = function (_a) {
     return (react_1["default"].createElement(EntitieDiv, null, entities.map(function (entities) { return (react_1["default"].createElement(EntitieSection, { key: entities.id, className: 'list-group-item' },
         react_1["default"].createElement(EntitiePhoto, null,
             react_1["default"].createElement("img", { src: entities.thumbnailUrl })),
-        react_1["default"].createElement(EntitieRightSewction, null,
+        react_1["default"].createElement(EntitieRightSection, null,
             react_1["default"].createElement(PostsSectionTitle, null, lodash_1["default"].sample(companyName)),
             react_1["default"].createElement(PostsSectionBottom, null, "Caracas 1050,Distrito Capital")))); })));
 };

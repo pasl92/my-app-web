@@ -84,7 +84,7 @@ export const DropDownMenu: FC = () => {
                     'Home'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem ><img src='./icons/house2.png'/><a href="MainPage">Home</a></MenuItem>
                 }
                 {
-                    'Publication'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem>  <img src='./icons/publications.png'/> <a href="testsite">Publication</a></MenuItem>
+                    'Publication'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem>  <img src='./icons/publications.png'/> <a href="Publications">Publication</a></MenuItem>
                 }
                 {
                     'People'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem> <img src='./icons/people.png'/> <a href="TestSite">People</a> </MenuItem>

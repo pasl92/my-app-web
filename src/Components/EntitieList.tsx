@@ -42,7 +42,7 @@ const EntitiePhoto = styled.div`
 
 `;
 
-const EntitieRightSewction = styled.div`
+const EntitieRightSection = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -62,10 +62,10 @@ const EntitieList = ({entities, loading} : {entities: any[], loading: boolean}) 
       {entities.map(entities => (
           <EntitieSection key={entities.id} className='list-group-item'>
             <EntitiePhoto><img src={entities.thumbnailUrl}></img></EntitiePhoto>
-              <EntitieRightSewction>
+              <EntitieRightSection>
                 <PostsSectionTitle>{_.sample(companyName)}</PostsSectionTitle>
                 <PostsSectionBottom>Caracas 1050,Distrito Capital</PostsSectionBottom>
-              </EntitieRightSewction>
+              </EntitieRightSection>
         </EntitieSection>
         ))}
     </EntitieDiv>

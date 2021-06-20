@@ -174,7 +174,7 @@ const UserProfile: FC = () => {
 
                     <YourPublications>
                         <img src="./icons/bell.png"/>
-                        <a href="testsite"> Your publications </a>
+                        <a href="Publications"> Your publications </a>
                             <PhotoBorder>
                                 <img src="./icons/plus.png"/>
                             </PhotoBorder>
@@ -187,7 +187,7 @@ const UserProfile: FC = () => {
 
                 <OtherSections>
                     <img src="./icons/publications.png"/>
-                    <a href="testsite"> <p>Publications</p> </a>
+                    <a href="Publications"> <p>Publications</p> </a>
                 </OtherSections>
 
                 <OtherSections>
