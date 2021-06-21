@@ -41,7 +41,6 @@ const App: FC = () => {
           <TopBar></TopBar>
             <LeftAndMainPage>
               <LeftMenu></LeftMenu>
-              
                 <Switch>
                     <Route path="/TestSite" exact>
                       <TestSite/>
@@ -66,14 +65,8 @@ const App: FC = () => {
                     <Route path="/WorkspacesSite" exact>
                       <WorkspacesSite/>
                     </Route>
-
-
                 </Switch>
-
-              
             </LeftAndMainPage>
-
-          
       </Page>
     </Router>
     </>

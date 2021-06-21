@@ -51,6 +51,7 @@ const Post = styled.div`
         max-height: 100%;   
         border-top-left-radius: 10px; 
         border-top-right-radius: 10px; 
+        border-bottom-style: dotted;
         }
 
     a{

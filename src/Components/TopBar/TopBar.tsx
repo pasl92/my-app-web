@@ -4,6 +4,7 @@ import {Colors} from "../../styledHelpers/Colors";
 import Search from "./Components/Search/Search";
 import useDropdown from 'react-dropdown-hook';
 import {DropDownMenu} from "./Components/DropDownMenu/DropDownMenu";
+import { Messages } from "./Components/Messages"
 
 const Wrapper =styled.div`
     width: 100%;
@@ -90,9 +91,14 @@ const Arrow = styled.div`
 
 export const TopBar: FC = () => {
     const[wrappRef, dropdownOpen, toggleDropdown] = useDropdown();
+    const[messageWrappRef, messageDropdownOpen, messagetoggleDropdown] = useDropdown();
 
     const menuHandler = () => {
         toggleDropdown();
+    }
+
+    const MessagesHandler = () => {
+        messagetoggleDropdown();
     }
 
     return(
@@ -119,9 +125,10 @@ export const TopBar: FC = () => {
                         <img src="./icons/house.png"/>
                     </NotificationButtons>
 
-                    <NotificationButtons>
+                    <NotificationButtons  ref={messageWrappRef} onClick={messagetoggleDropdown}>
                         <img src="./icons/comments.png"/>
                         <NotifyBadge>2</NotifyBadge>
+                        {messageDropdownOpen && <Messages></Messages>}
                     </NotificationButtons>
                     
 
