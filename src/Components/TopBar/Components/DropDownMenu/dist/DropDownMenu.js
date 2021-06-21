@@ -26,7 +26,7 @@ exports.DropDownMenu = function () {
             React.createElement(TitleMenuItem, null,
                 React.createElement("p", null, "Platform")),
             'Home'.toLowerCase().includes(inputText.toLowerCase()) && React.createElement("a", { href: "MainPage" },
-                React.createElement(MenuItem, { onClick: function () { return "myhref('MainPage');"; } },
+                React.createElement(MenuItem, null,
                     React.createElement("img", { src: './icons/house2.png' }),
                     "Home")),
             'Publication'.toLowerCase().includes(inputText.toLowerCase()) && React.createElement(MenuItem, null,

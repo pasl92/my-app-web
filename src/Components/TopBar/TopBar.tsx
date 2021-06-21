@@ -5,6 +5,8 @@ import Search from "./Components/Search/Search";
 import useDropdown from 'react-dropdown-hook';
 import {DropDownMenu} from "./Components/DropDownMenu/DropDownMenu";
 import { Messages } from "./Components/Messages"
+import { Notifications } from "./Components/Notification"
+
 
 const Wrapper =styled.div`
     width: 100%;
@@ -64,6 +66,9 @@ const NotificationButtons = styled.div`
     display: flex;
     border-radius: 50%;
     align-items: center;
+    img{
+        height: 20px;
+    }
 `;
 
 
@@ -92,18 +97,11 @@ const Arrow = styled.div`
 export const TopBar: FC = () => {
     const[wrappRef, dropdownOpen, toggleDropdown] = useDropdown();
     const[messageWrappRef, messageDropdownOpen, messagetoggleDropdown] = useDropdown();
-
-    const menuHandler = () => {
-        toggleDropdown();
-    }
-
-    const MessagesHandler = () => {
-        messagetoggleDropdown();
-    }
+    const[notiWrappRef, notiDropdownOpen, notitoggleDropdown] = useDropdown();
 
     return(
         <Wrapper>
-            <LeftSection ref={wrappRef} onClick={menuHandler}>
+            <LeftSection ref={wrappRef} onClick={toggleDropdown}>
                 <Logo>
                     <img src='/logo.png'/>
                 </Logo>
@@ -122,7 +120,7 @@ export const TopBar: FC = () => {
             
                 <NotificationsWrapper>
                     <NotificationButtons>
-                        <img src="./icons/house.png"/>
+                        <a href="MainPage"><img src="./icons/house.png"></img></a>
                     </NotificationButtons>
 
                     <NotificationButtons  ref={messageWrappRef} onClick={messagetoggleDropdown}>
@@ -132,9 +130,10 @@ export const TopBar: FC = () => {
                     </NotificationButtons>
                     
 
-                    <NotificationButtons>
+                    <NotificationButtons ref={notiWrappRef} onClick={notitoggleDropdown}>
                         <img src="./icons/bell.png"/>
                         <NotifyBadge>12</NotifyBadge>
+                        {notiDropdownOpen && <Notifications></Notifications>}
                     </NotificationButtons>
                 </NotificationsWrapper>
             

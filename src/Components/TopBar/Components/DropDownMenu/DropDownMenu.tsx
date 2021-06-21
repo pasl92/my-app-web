@@ -94,7 +94,7 @@ export const DropDownMenu: FC = () => {
             <InnerWarpper>
                 <TitleMenuItem><p>Platform</p></TitleMenuItem>
                 {
-                    'Home'.toLowerCase().includes(inputText.toLowerCase()) && <a href="MainPage"><MenuItem  onClick={()=> "myhref('MainPage');"}><img src='./icons/house2.png'/>Home</MenuItem></a>
+                    'Home'.toLowerCase().includes(inputText.toLowerCase()) && <a href="MainPage"><MenuItem><img src='./icons/house2.png'/>Home</MenuItem></a>
                 }
                 {
                     'Publication'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem>  <img src='./icons/publications.png'/> <a href="Publications">Publication</a></MenuItem>
