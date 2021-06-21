@@ -23,7 +23,7 @@ var EntitieList = function (_a) {
     var companyName = ['Subsid Corp ltd', 'World Company SAS'];
     return (react_1["default"].createElement(EntitieDiv, null, entities.map(function (entities) { return (react_1["default"].createElement(EntitieSection, { key: entities.id, className: 'list-group-item' },
         react_1["default"].createElement(EntitiePhoto, null,
-            react_1["default"].createElement("img", { src: entities.thumbnailUrl })),
+            react_1["default"].createElement("img", { src: entities.thumbnailUrl, alt: "description of image" })),
         react_1["default"].createElement(EntitieRightSection, null,
             react_1["default"].createElement(PostsSectionTitle, null, lodash_1["default"].sample(companyName)),
             react_1["default"].createElement(PostsSectionBottom, null, "Caracas 1050,Distrito Capital")))); })));

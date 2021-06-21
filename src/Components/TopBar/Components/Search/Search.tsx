@@ -19,6 +19,7 @@ const Input = styled.input`
 
 const SearchIcon = styled.img`
   background-size: cover;
+  margin-left: 1%;
   :hover {
           cursor: pointer;
   }  
@@ -28,7 +29,7 @@ const Search: FC = () => {
     return (
         <>
             <Wrapper>
-                <Input placeholder='Search Legalcluster...' />
+                <Input placeholder='Search Legalcluster...' ></Input>
                 <SearchIcon 
                   src={"./icons/search.svg"}
                   alt="img">

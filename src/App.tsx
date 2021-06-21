@@ -1,4 +1,3 @@
-  
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Reset } from 'styled-reset'
@@ -74,5 +73,3 @@ const App: FC = () => {
 }
 
 export default App;
-
-

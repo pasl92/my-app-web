@@ -65,7 +65,7 @@ const EntitieList = ({entities, loading} : {entities: any[], loading: boolean}) 
     <EntitieDiv>
       {entities.map(entities => (
           <EntitieSection key={entities.id} className='list-group-item'>
-            <EntitiePhoto><img src={entities.thumbnailUrl}></img></EntitiePhoto>
+            <EntitiePhoto><img src={entities.thumbnailUrl} alt="description of image"></img></EntitiePhoto>
               <EntitieRightSection>
                 <PostsSectionTitle>{_.sample(companyName)}</PostsSectionTitle>
                 <PostsSectionBottom>Caracas 1050,Distrito Capital</PostsSectionBottom>

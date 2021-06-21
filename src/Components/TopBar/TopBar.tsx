@@ -103,10 +103,10 @@ export const TopBar: FC = () => {
         <Wrapper>
             <LeftSection ref={wrappRef} onClick={toggleDropdown}>
                 <Logo>
-                    <img src='/logo.png'/>
+                    <img src='/logo.png' alt="description of image"/>
                 </Logo>
                 <Home>
-                    <img src='./icons/house2.png'/> 
+                    <img src='./icons/house2.png' alt="description of image"/> 
                 </Home>
                 <HomeInscription>Home</HomeInscription>
                 <Arrow>
