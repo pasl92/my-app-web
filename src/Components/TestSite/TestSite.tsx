@@ -11,6 +11,7 @@ const Ntdh =styled.div`
     padding-top:4%;
     img{
         box-shadow: 1px 1px 12px ${Colors.black};
+        border-radius: 10px;
     }
 `;
 

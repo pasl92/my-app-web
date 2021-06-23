@@ -36,7 +36,7 @@ const App: FC = () => {
   return (
     <>
     <Router>
-      <Redirect exact from="/" to="MainPage" />
+      
         <Reset/>
           <Page>
             <TopBar></TopBar>
@@ -66,6 +66,7 @@ const App: FC = () => {
                       <Route path="/WorkspacesSite" exact>
                         <WorkspacesSite/>
                       </Route>
+                      
                   </Switch>
               </LeftAndMainPage>
         </Page>
