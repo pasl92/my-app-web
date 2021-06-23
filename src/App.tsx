@@ -15,6 +15,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
   Link
 } from "react-router-dom";
 
@@ -35,38 +36,39 @@ const App: FC = () => {
   return (
     <>
     <Router>
-      <Reset/>
-        <Page>
-          <TopBar></TopBar>
-            <LeftAndMainPage>
-              <LeftMenu></LeftMenu>
-                <Switch>
-                    <Route path="/TestSite" exact>
-                      <TestSite/>
-                    </Route>
+      <Redirect exact from="/" to="MainPage" />
+        <Reset/>
+          <Page>
+            <TopBar></TopBar>
+              <LeftAndMainPage>
+                <LeftMenu></LeftMenu>
+                  <Switch>
+                      <Route path="/TestSite" exact>
+                        <TestSite/>
+                      </Route>
 
-                    <Route path="/MainPage" exact>
-                      <MainPage/>
-                    </Route>
+                      <Route path="/MainPage" exact>
+                        <MainPage/>
+                      </Route>
 
-                    <Route path="/Publications" exact>
-                      <Publications/>
-                    </Route>
+                      <Route path="/Publications" exact>
+                        <Publications/>
+                      </Route>
 
-                    <Route path="/MyProfile" exact>
-                      <MyProfile/>
-                    </Route>
+                      <Route path="/MyProfile" exact>
+                        <MyProfile/>
+                      </Route>
 
-                    <Route path="/Entities" exact>
-                      <Entities/>
-                    </Route>
+                      <Route path="/Entities" exact>
+                        <Entities/>
+                      </Route>
 
-                    <Route path="/WorkspacesSite" exact>
-                      <WorkspacesSite/>
-                    </Route>
-                </Switch>
-            </LeftAndMainPage>
-      </Page>
+                      <Route path="/WorkspacesSite" exact>
+                        <WorkspacesSite/>
+                      </Route>
+                  </Switch>
+              </LeftAndMainPage>
+        </Page>
     </Router>
     </>
   )

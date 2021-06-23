@@ -21,6 +21,7 @@ var LeftAndMainPage = styled_components_1["default"].div(templateObject_2 || (te
 var App = function () {
     return (react_1["default"].createElement(react_1["default"].Fragment, null,
         react_1["default"].createElement(react_router_dom_1.BrowserRouter, null,
+            react_1["default"].createElement(react_router_dom_1.Redirect, { exact: true, from: "/", to: "MainPage" }),
             react_1["default"].createElement(styled_reset_1.Reset, null),
             react_1["default"].createElement(Page, null,
                 react_1["default"].createElement(TopBar_1.TopBar, null),
